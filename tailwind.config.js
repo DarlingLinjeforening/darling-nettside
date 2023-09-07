@@ -9,6 +9,7 @@ export default {
       
     },
     colors: {
+      'white': '#FFFFFF',
       'darling-purple': '#5D2684',
       'darling-purple-light': '#D5CAEA',
       'darling-secondary-purple': '#7931AC',
