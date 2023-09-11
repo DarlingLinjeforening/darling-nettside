@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>halla inshallag</h1>
+        Komponent for Contact form (ContactFormComp)
     </div>
 </template>
 

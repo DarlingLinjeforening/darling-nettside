@@ -1,6 +1,6 @@
 <template>
     <div>
-        headshot
+        Komponent for Headshots (HeadshotComp)
     </div>
 </template>
 
