@@ -1,6 +1,6 @@
 <template>
     <div>
-    om loungen
+        Komponent for Lounge (LoungeComp)
     </div>
 </template>
 

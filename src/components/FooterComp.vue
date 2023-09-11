@@ -1,5 +1,5 @@
 <template>
     <footer>
-    this is a footer 
+        Komponent for Footer (FooterComp)
     </footer>
 </template>

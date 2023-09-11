@@ -1,6 +1,6 @@
 <template>
   <div>
-  <h1>Jobs</h1>
+  <h1>Komponent for Job offers (JobsComp)</h1>
   </div>
 </template>
 
