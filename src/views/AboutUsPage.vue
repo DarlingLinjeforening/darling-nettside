@@ -1,7 +1,15 @@
 <template>
-  <div class="about">
-    <h1>This is our about page</h1>
+  <div>
+  <headshot-comp />
+  <faq-comp />
   </div>
 </template>
 
-
+<script>
+import FaqComp from '../components/FaqComp.vue'
+import HeadshotComp from '../components/HeadshotComp.vue'
+  export default {
+  components: { HeadshotComp, FaqComp },
+    
+  }
+</script>
