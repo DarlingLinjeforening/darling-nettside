@@ -1,8 +1,6 @@
 <template>
     <div>
-    Webutvikling, årsweb, interaksjonsdesign, grafisk
-    <br>
-    ÆÆÆÆÆÆÆÆÆÆÆÆÆÆÆÆææ
+        Komponent for Study programs (StudyProgramsComp)
     </div>
 </template>
 
