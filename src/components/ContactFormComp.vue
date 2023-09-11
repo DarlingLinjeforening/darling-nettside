@@ -1,6 +1,8 @@
 <template>
     <div>
-        <h1>Form</h1>
+
+        Komponent for Contact form (ContactFormComp)
+
     </div>
 </template>
 

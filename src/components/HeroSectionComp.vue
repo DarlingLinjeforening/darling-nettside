@@ -1,3 +1,3 @@
 <template>
-    <h1>Jasså, vil du tøyse med menn?</h1>
+    <h1>Komponent for Hero Section (HeroSectionComp)</h1>
 </template>
