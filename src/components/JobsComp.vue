@@ -1,6 +1,6 @@
 <template>
   <div>
-  <h1>Jobber kommer her</h1>
+  <h1>Jobs</h1>
   </div>
 </template>
 
