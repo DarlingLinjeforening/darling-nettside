@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>halla inshallag</h1>
+        <h1>Form</h1>
     </div>
 </template>
 
