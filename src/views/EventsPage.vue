@@ -1,4 +1,5 @@
 <template>
+<h1 class="text-3xl flex justify-center">Events</h1>
     <EventsComp />
 </template>
 

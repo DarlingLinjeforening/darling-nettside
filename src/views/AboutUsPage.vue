@@ -1,5 +1,6 @@
 <template>
   <div>
+  <h1 class="text-3xl flex justify-center">About us</h1>
   <headshot-comp />
   <faq-comp />
   </div>
