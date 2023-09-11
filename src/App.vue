@@ -10,9 +10,10 @@ import FooterComp from './components/FooterComp.vue'
 
   <Navbar />
 
-  <HeaderComp />
+  <!-- <HeaderComp /> -->
 
   <RouterView />
 
   <FooterComp />
+  
 </template>

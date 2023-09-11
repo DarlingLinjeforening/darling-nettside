@@ -1,6 +1,6 @@
 <template>
     <div>
-        jalla
+        headshot
     </div>
 </template>
 
