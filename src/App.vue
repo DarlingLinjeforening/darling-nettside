@@ -15,4 +15,5 @@ import FooterComp from './components/FooterComp.vue'
   <RouterView />
 
   <FooterComp />
+  
 </template>
