@@ -42,7 +42,7 @@
   <nav class="flex flex-row text-white justify-between bg-darling-purple p-4">
       <div>
         <a href="/">
-          <span >Darling</span>
+          <span > <img class="h-8 " src="/images/Darling-logo-white.png" alt=""></span>
         </a>
       </div>
       <div class="flex flex-row">
