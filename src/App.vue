@@ -17,3 +17,9 @@ import FooterComp from './components/FooterComp.vue'
   <FooterComp />
   
 </template>
+
+<style scoped>
+html, body{
+  height: 100vh;
+}
+</style>
