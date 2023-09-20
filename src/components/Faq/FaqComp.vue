@@ -1,6 +1,6 @@
 <template>
   <section class="m-10 ml-6">
-    <HeaderComp h="2" text="Frequently Asked Questions" />
+    <HeaderComp h="1" text="Frequently Asked Questions" />
 
     <div>
       <FaqQuestion
