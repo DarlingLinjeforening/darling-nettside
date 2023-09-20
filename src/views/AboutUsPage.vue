@@ -1,19 +1,20 @@
 <template>
-  <div>
-  <h1 class="text-3xl flex justify-center">About us</h1>
-  <headshot-comp />
-  <faq-comp />
-  <lounge-comp />
-  </div>
+  <section>
+    <div class="ml-3 mt-3">
+      <HeaderComp h="1" text="About Us" width="10rem"/>
+    </div>
+    <LoungeComp />
+    <FaqComp />
+  </section>
 </template>
 
 <script>
-import EventsComp from '../components/EventsComp.vue';
-import FaqComp from '../components/FaqComp.vue'
-import HeadshotComp from '../components/HeadshotComp.vue'
-import LoungeComp from '../components/LoungeComp.vue';
-  export default {
-  components: { HeadshotComp, FaqComp, LoungeComp, EventsComp },
-    
-  }
+import EventsComp from "../components/EventsComp.vue";
+import FaqComp from "../components/Faq/FaqComp.vue";
+import HeadshotComp from "../components/HeadshotComp.vue";
+import LoungeComp from "../components/LoungeComp.vue";
+import HeaderComp from "../components/HeaderComp.vue";
+export default {
+  components: { HeadshotComp, FaqComp, LoungeComp, EventsComp, HeaderComp },
+};
 </script>
