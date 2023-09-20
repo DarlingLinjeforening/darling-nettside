@@ -22,6 +22,8 @@
 <script setup>
 const props = defineProps(["question", "answer"]);
 
+
+
 </script>
 
 <script>
