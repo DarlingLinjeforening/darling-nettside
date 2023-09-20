@@ -24,5 +24,7 @@ export default {
       'darling-secondary-green': '#4D8426'
     }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
