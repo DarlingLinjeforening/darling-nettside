@@ -4,26 +4,41 @@
 
     <div>
       <FaqQuestion
-        v-for="item in items"
-        :question="item.question"
-        :answer="item.answer"
+        v-for="item in faq"
+        :question="item.questions"
+        :answer="item.answers"
       />
     </div>
   </section>
 </template>
 
-<script setup>
-const items = [
-  { question: "What's so special about the movie Netriks?", answer: "It starts to make you think." },
-  { question: "What was your emotional reaction after watching Netriks?", answer: "I almost lost it while I watched it!" },
-  { question: "Can you describe the plot of Netriks in one sentence?", answer: "Netriks takes you on a mind-bending journey through the intricacies of a virtual world where reality and illusion collide." },
-];
-</script>
-
 <script>
+import { builder } from "@/main";
 import FaqQuestion from "./FaqQuestion.vue";
 import HeaderComp from "../HeaderComp.vue";
+
 export default {
-  components: { FaqQuestion, HeaderComp },
+  components: {
+    FaqQuestion,
+    HeaderComp,
+  },
+  data() {
+    return {
+      faq: [],
+    };
+  },
+  mounted() {
+    this.$sanityClient
+      .fetch('*[_type == "faq"]{questions, answers}')
+      .then((data) => {
+        console.log(data);
+        this.faq = data;
+      });
+  },
+  methods: {
+    urlFor(source) {
+      return builder.image(source);
+    },
+  },
 };
 </script>
