@@ -6,7 +6,13 @@ export default {
   ],
   theme: {
     extend: {
-      
+      width: {
+        '25': '25%',
+      },
+      height: {
+        '100': '100vh',
+        '31': '31rem'
+      }
     },
     colors: {
       'white': '#FFFFFF',
