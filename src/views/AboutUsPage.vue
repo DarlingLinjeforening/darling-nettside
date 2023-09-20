@@ -8,11 +8,6 @@
   <HeadshotComp image = ../public/images/aaaa.jpg name="Andreas Christiansen" role="Leder av Web Komiteen" phone=96969696 mail="A@b.c"/>
   <HeadshotComp image = ../public/images/mo.jpg name="Christopher Ngo" role="Leder av Bæsj Komiteen" phone=1234567 mail="n@g.o"/>
   <HeadshotComp image = ../public/images/aaaa.jpg name="Andreas Christiansen" role="Leder av Web Komiteen" phone=96969696 mail="A@b.c"/>
-  <HeadshotComp image = ../public/images/mo.jpg name="Christopher Ngo" role="Leder av Bæsj Komiteen" phone=1234567 mail="n@g.o"/>
-  <HeadshotComp image = ../public/images/mo.jpg name="Christopher Ngo" role="Leder av Bæsj Komiteen" phone=1234567 mail="n@g.o"/>
-  <HeadshotComp image = ../public/images/mo.jpg name="Christopher Ngo" role="Leder av Bæsj Komiteen" phone=1234567 mail="n@g.o"/>
-  <HeadshotComp image = ../public/images/mo.jpg name="Christopher Ngo" role="Leder av Bæsj Komiteen" phone=1234567 mail="n@g.o"/>
-  <HeadshotComp image = ../public/images/mo.jpg name="Christopher Ngo" role="Leder av Bæsj Komiteen" phone=1234567 mail="n@g.o"/>
 </div>
   </div>
   
