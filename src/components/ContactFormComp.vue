@@ -1,6 +1,6 @@
 <template>
   <div class="mt-12 md:mt-5">
-    <form class="flex content-center flex-col w-60 md:w-72 lg:w-96 lg:text-xl">
+    <form class="flex content-center flex-col w-60 md:w-72 lg:w-96 lg:text-xl" @submit.prevent="submitForm" >
       <label for="name">Name:</label>
       <input
         class="shadow appearance-none border rounded py-2 px-3 md:mt-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -31,6 +31,44 @@
   </div>
 </template>
 
-<script setup>
 
+<script>
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    };
+  },
+  methods: {
+    submitForm() {
+      const formData = new FormData();
+      formData.append('name', this.name);
+      formData.append('email', this.email);
+      formData.append('subject', this.subject);
+      formData.append('message', this.message);
+
+      console.log(this.name);
+      console.log(this.email);
+      console.log(this.subject);
+      console.log(this.message);
+
+      axios.post('https://folk.ntnu.no/haavaala/FormHandling.php', formData)
+        .then(response => {
+          alert("DU klarte det ass")
+          console.log(response.data); 
+        })
+        .catch(error => {
+          alert("dette gikk ikke helt bra du")
+          console.error(error);
+        });
+    },
+  },
+};
 </script>
+
+
