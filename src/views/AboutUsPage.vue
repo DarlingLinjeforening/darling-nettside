@@ -24,7 +24,7 @@
 
 <script>
 import EventsComp from '../components/EventsComp.vue'
-import FaqComp from '../components/FaqComp.vue'
+import FaqComp from '../components/Faq/FaqComp.vue'
 import HeadshotComp from '../components/HeadshotComp.vue'
 import LoungeComp from '../components/LoungeComp.vue'
 import HeadshotsComp from '../components/HeadshotsComp.vue'
