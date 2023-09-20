@@ -3,8 +3,8 @@
         <img :src="image" alt="Profile Image" class="object-cover w-52 h-52 border-2 border-darling-purple min-w-max"/>
         <p class="font-bold text-xl">{{ name }}</p>
         <p class="font-bold text-base">{{ role }}</p>
-        <p>Tel: {{ phone }}</p>
-        <p>Email: {{ mail }}</p>
+        <p v-if="phone">Tel: {{ phone }}</p>
+        <p v-if="mail">Email: {{ mail }}</p>
       </div>
   </template>
   
