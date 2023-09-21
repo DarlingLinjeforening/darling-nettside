@@ -56,16 +56,16 @@ export default {
       console.log(this.email);
       console.log(this.subject);
       console.log(this.message);
-
-      axios.post('https://folk.ntnu.no/haavaala/FormHandling.php', formData)
-        .then(response => {
-          alert("DU klarte det ass")
-          console.log(response.data); 
-        })
-        .catch(error => {
-          alert("dette gikk ikke helt bra du")
-          console.error(error);
-        });
+      
+axios.post('https://folk.ntnu.no/haavaala/FormHandling.php', formData)
+  .then(response => {
+    alert("Email sent successfully!");
+    console.log(response.data); 
+  })
+  .catch(error => {
+    alert("Failed to send email. Please try again later.");
+    console.error(error);
+  });
     },
   },
 };
