@@ -1,29 +1,33 @@
 <template>
     <footer>
         <img class="w-screen" src="../../public/images/footer-img-darling.svg" alt="Footer image">
-        <div class="flex">
-            <div class="footer__adresse">
-                <h3>Adresse</h3>
+        <div class="flex bg-darling-purple p-16 justify-center gap-20">
+            <div class="text-white">
+                <h3 class="text-center mb-10 font-bold text-lg uppercase">Adresse</h3>
                 <p>Teknologiveien 22, 2815 Gjøvik, Innlandet</p>
             </div>
             <div>
-                <div>
-                    <a href="https://www.instagram.com/darling.linjeforening/"><img src="./assets/img/instagram-icon.svg" alt="Instagram ikon"></a>
-                    <a href="https://www.facebook.com/darling.linjeforening"><img src="./assets/img/facebook-icon.svg" alt="Facebook ikon"></a>
-                    <a href="https://www.linkedin.com/company/darling-linjeforening/"><img src="./assets/img/linkedin-icon.svg" alt="LinkedIn ikon"></a>
+                <div class="flex flex-row justify-center gap-3 -mt-3 mb-10">
+                    <a href="https://www.instagram.com/darling.linjeforening/"><img src="../../public/images/instagram-icon.svg" alt="Instagram icon"></a>
+                    <a href="https://www.facebook.com/darling.linjeforening"><img src="../../public/images/facebook-icon.svg" alt="Facebook icon"></a>
+                    <a href="https://www.linkedin.com/company/darling-linjeforening/"><img src="../../public/images/linkedin-icon.svg" alt="LinkedIn icon"></a>
                 </div>
-                <p>Følg oss på Instagram, Facebook og LinkedIn!</p>
+                <p class="text-white">Følg oss på Instagram, Facebook og LinkedIn!</p>
             </div>
             <div>
-                <h3>Kontakt</h3>
-                <p>kontakt@darlinglinjeforening.org</p>
+                <h3 class="text-white text-center mb-10 font-bold text-lg uppercase">Kontakt</h3>
+                <p class="text-white">kontakt@darlinglinjeforening.org</p>
             </div>
             <div>
-            <span id="footerBtn">
-                <img class="pil" src="./assets/img/chevronpil.svg" alt="arrow">
-            </span>
-            <p>© 2022 DARLING Linjeforening</p>
         </div>
         </div>
+    <div class="bg-darling-purple-light">
+        <div class="flex justify-center -translate-y-10">
+            <div class="rounded-full bg-darling-purple-light p-7 ">
+                <img class="w-7" src="../../public/images/arrow.svg" alt="arrow">
+            </div>
+            </div>
+        <p class="flex justify-center -mt-10 pb-5 text-bg-darling-purple">© 2022 DARLING Linjeforening</p>
+    </div>
     </footer>
 </template>
