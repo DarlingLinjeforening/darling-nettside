@@ -1,6 +1,5 @@
 <template>
-  <div class="md:min-h-screen">
-    <!-- <LightBackgroundCompVue /> -->
+
   <div class="w-full lg:text-xl">
     <h1 class="text-3xl font-bold flex justify-center md:justify-start md:p-5">
       Contact us
@@ -11,7 +10,7 @@
     </p>
   </div>
     <div class="">
-      <aside class="md:bg-darling-purple-light md:w-25 md:absolute md:right-0 md:top-0 mt-16 md:min-h-screen">
+      <aside class="md:bg-darling-purple-light md:w-25 md:absolute md:right-0 md:top-0 mt-14 md:min-h-screen">
   </aside>
     </div>
   <div
@@ -20,7 +19,7 @@
     <ContactInfoComp />
     <ContactFormComp />
   </div>
-  </div>
+
 </template>
 
 <script>
