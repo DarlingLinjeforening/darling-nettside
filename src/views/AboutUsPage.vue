@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import EventsComp from "../components/EventsComp.vue";
+import EventsComp from '../components/Events/EventsComp.vue'
 import FaqComp from "../components/Faq/FaqComp.vue";
 import HeadshotComp from "../components/HeadshotComp.vue";
 import LoungeComp from "../components/LoungeComp.vue";
