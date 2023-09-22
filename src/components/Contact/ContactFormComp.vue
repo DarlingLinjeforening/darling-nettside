@@ -2,22 +2,22 @@
   <div class="mt-12 md:mt-5">
     <form class="flex content-center flex-col w-60 md:w-72 lg:w-96 lg:text-xl" @submit.prevent="submitForm" >
       <label for="name">Name:</label>
-      <input
+      <input required
         class="shadow appearance-none border rounded py-2 px-3 md:mt-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         v-model="name"
       />
       <label class="mt-5 md:mt-8" for="email">Email:</label>
-      <input
+      <input required
         class="shadow appearance-none border rounded py-2 px-3 md:mt-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         v-model="email"
       />
       <label class="mt-5 md:mt-8" for="subject">Subject:</label>
-      <input
+      <input required
         class="shadow appearance-none border rounded py-2 px-3 md:mt-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         v-model="subject"
       />
       <label class="mt-5 md:mt-8" for="message">Message:</label>
-      <textarea
+      <textarea required
         class="shadow appearance-none border rounded py-2 px-3 md:mt-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline max-h-32 md:max-h-44 lg:h-44"
         v-model="message"
       >
@@ -34,6 +34,10 @@
 
 <script>
 import axios from 'axios';
+// import Toast from 'vue-toast-notification'
+// import 'vue-toast-notification/dist/theme-default.css'
+
+// vue.use(Toast)
 
 export default {
   data() {
@@ -59,11 +63,23 @@ export default {
       
 axios.post('https://folk.ntnu.no/haavaala/FormHandling.php', formData)
   .then(response => {
-    alert("Email sent successfully!");
+    this.$toast.open({
+      message: "Email sent successfully!",
+      type: 'success',
+      pauseOnHover: true,
+      duration: 3000,
+      position: "top-right"
+      })
     console.log(response.data); 
   })
   .catch(error => {
-    alert("Failed to send email. Please try again later.");
+        this.$toast.open({
+      message: "Could not send email!",
+      type: 'error',
+      pauseOnHover: true,
+      duration: 3000,
+      position: "top-right"
+      })
     console.error(error);
   });
     },
