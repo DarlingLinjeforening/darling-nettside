@@ -5,6 +5,9 @@ export default {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      'sans': ['Atkinson Hyperlegible', 'sans-serif']
+    },
     extend: {
       width: {
         '25': '25%',
