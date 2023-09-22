@@ -16,16 +16,7 @@
 
       <div class="flex flex-row">
         <div @click="menuOpen = !menuOpen" class="p-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="fill-white sm:hidden"
-            viewBox="0 0 50 50"
-            width="40px"
-          >
-            <path
-              d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 L 0 7.5 z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 L 0 22.5 z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 L 0 37.5 z"
-            />
-          </svg>
+          <i :class="(menuOpen ? 'pi pi-times md:hidden text-3xl' : 'pi pi-bars md:hidden text-3xl')"></i>
         </div>
 
         <ul class="sm:flex flex-row gap-16 mx-0 md:mx-10 hidden">
@@ -87,8 +78,8 @@
         </ul>
         <!-- Social icons -->
         <div class="pt-32 pl-8 text-white font-bold text-3xl flex flex-col">
-          <span>P</span>
-          <span>X</span>
+          <i class="pi pi-instagram py-2 text-5xl"></i>
+          <i class="pi pi-twitter py-2 text-5xl"></i>
         </div>
       </div>
     </template>

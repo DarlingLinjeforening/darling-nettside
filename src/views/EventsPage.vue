@@ -1,13 +1,19 @@
 <template>
-<h1 class="text-3xl flex justify-center">Events</h1>
-    <EventsComp />
+    <section>
+      <div class="m-3">
+        <HeaderComp text="Upcoming Events" h="1" width="18em"/>
+      </div>
+        <EventsComp />
+    </section>
 </template>
 
 <script>
-import EventsComp from '../components/EventsComp.vue';
+import EventsComp from "../components/Events/EventsComp.vue";
+import HeaderComp from "../components/HeaderComp.vue";
 export default {
-    components: {
-        EventsComp
-    }
-}
+  components: {
+    EventsComp,
+    HeaderComp,
+  },
+};
 </script>

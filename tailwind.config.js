@@ -21,7 +21,8 @@ export default {
       'darling-secondary-purple': '#7931AC',
       'darling-secondary-yellow': '#FFB43B',
       'darling-secondary-orange': '#FF743E',
-      'darling-secondary-green': '#4D8426'
+      'darling-secondary-green': '#4D8426',
+      'white-alt': '#F2F2F2'
     }
   },
   plugins: [
