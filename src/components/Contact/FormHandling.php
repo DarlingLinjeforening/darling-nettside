@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $name = $_POST['name'];
     $mailFrom = $_POST['email'];
     $message = $_POST['message'];
-    $mailTo = "mail@hlarsen.no";
+    $mailTo = "haavaala@ntnu.no";
     $subject = $_POST['subject'];
     $txt = "You have received an email from " . $mailFrom . ".\n\n" . $message;
     $headers = 'From: DarlingNettside' . "\r\n" .
