@@ -34,10 +34,6 @@
 
 <script>
 import axios from 'axios';
-// import Toast from 'vue-toast-notification'
-// import 'vue-toast-notification/dist/theme-default.css'
-
-// vue.use(Toast)
 
 export default {
   data() {
