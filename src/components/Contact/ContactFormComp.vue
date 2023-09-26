@@ -22,10 +22,12 @@
         v-model="message"
       >
       </textarea>
+      <div class="g-recaptcha mt-5 md:mt-8" id="g-recaptcha"></div>
       <input
         class="mt-5 text-white bg-darling-purple hover:bg-darling-purple-light hover:text-darling-purple cursor-pointer font-bold py-2 px-4 rounded md:mt-8"
         type="submit"
         value="Submit"
+        name="Submit"
       />
     </form>
   </div>
@@ -33,6 +35,7 @@
 
 
 <script>
+
 import axios from 'axios';
 
 export default {
@@ -45,6 +48,18 @@ export default {
     };
   },
   methods: {
+        async loadRecaptcha() {
+      // Load reCAPTCHA with your site key
+      await new Promise((resolve) => {
+        grecaptcha.ready(resolve);
+      });
+
+      // Render the reCAPTCHA widget in the specified div
+      grecaptcha.render('g-recaptcha', {
+        sitekey: '6LdXwkUoAAAAAC8lcMYiO5LwzdOHxTWeHEz1jQvU',
+        // Other options if needed
+      });
+    },
     submitForm() {
       const formData = new FormData();
       formData.append('name', this.name);
@@ -57,7 +72,7 @@ export default {
       console.log(this.subject);
       console.log(this.message);
       
-axios.post('https://folk.ntnu.no/haavaala/FormHandling.php', formData)
+axios.post('https://nxtseq.com/darling/FormHandling.php', formData)
   .then(response => {
     this.$toast.open({
       message: "Email sent successfully!",
@@ -80,7 +95,12 @@ axios.post('https://folk.ntnu.no/haavaala/FormHandling.php', formData)
   });
     },
   },
+  mounted() {
+    // Load and render reCAPTCHA when the component is mounted
+    this.loadRecaptcha();
+  }
 };
+
 </script>
 
 
