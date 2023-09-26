@@ -57,7 +57,6 @@ export default {
       // Render the reCAPTCHA widget in the specified div
       grecaptcha.render('g-recaptcha', {
         sitekey: '6LdXwkUoAAAAAC8lcMYiO5LwzdOHxTWeHEz1jQvU',
-        // Other options if needed
       });
     },
     submitForm() {
@@ -72,13 +71,13 @@ export default {
       console.log(this.subject);
       console.log(this.message);
       
-axios.post('https://nxtseq.com/darling/FormHandling.php', formData)
+axios.post('https://folk.ntnu.no/haavaala/FormHandling.php', formData)
   .then(response => {
     this.$toast.open({
       message: "Email sent successfully!",
       type: 'success',
       pauseOnHover: true,
-      duration: 3000,
+      duration: 5000,
       position: "top-right"
       })
     console.log(response.data); 
