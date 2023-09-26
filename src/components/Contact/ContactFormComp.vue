@@ -1,6 +1,6 @@
 <template>
   <div class="mt-12 md:mt-5">
-    <form class="flex content-center flex-col w-60 md:w-72 lg:w-96 lg:text-xl" @submit.prevent="submitForm" >
+    <form class="flex content-center flex-col w-72 md:w-72 lg:w-96 lg:text-xl" @submit.prevent="submitForm" >
       <label for="name">Name:</label>
       <input required
         class="shadow appearance-none border rounded py-2 px-3 md:mt-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
