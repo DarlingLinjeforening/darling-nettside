@@ -1,12 +1,16 @@
 
 
 <template>
-<div class="bg-gradient-to-tr from-darling-secondary-purple to-white via-darling-purple-light h-screen">
-<!-- <div class="m-10"> -->
+<div class="bg-gradient-to-tr from-darling-secondary-purple to-white via-darling-purple-light min-h-screen">
+<div class="p-5">
 <HeaderComp h="1" text="This is Darling" width="10rem" />
-<!-- </div> -->
+</div>
 <HeroSectionComp/>
 <StudyProgramsComp/>
+<div>
+<h1>halla</h1>
+<p>deubhebyfyebfuewbufbuebufbe</p>
+</div>
 </div>
 </template>
 <script>
