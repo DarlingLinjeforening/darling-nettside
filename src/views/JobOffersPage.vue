@@ -1,7 +1,7 @@
 <template>
     <section class="md:max-w-[75%] md:my-0 md:mx-auto">
     <div class="m-3 md:w-[75%]">
-        <HeaderComp text="Jobs" h="1" width="5em"/>
+        <HeaderComp text="Job Offers" h="1" width="10em"/>
     </div>
         <JobsComp />
     </section>
