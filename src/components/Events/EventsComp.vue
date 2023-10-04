@@ -162,9 +162,9 @@ export default {
           return event.properDateTime < currentDate;
         });
 
-        // Descending date default
-        this.events.sort((a, b) => compareDates(a, b, false));
-        this.oldEvents.sort((a, b) => compareDates(a, b, false));
+        // Ascending date default
+        this.events.sort((a, b) => compareDates(a, b, true));
+        this.oldEvents.sort((a, b) => compareDates(a, b, true));
       });
 
     this.$sanityClient.fetch('*[_type == "eventType"]{title}').then((data) => {
