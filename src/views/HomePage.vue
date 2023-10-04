@@ -1,7 +1,7 @@
 
 
 <template>
-<div class="bg-gradient-to-tr from-darling-secondary-purple to-white via-darling-purple-light min-h-screen">
+<div class="bg-gradient-to-tr from-darling-secondary-purple to-white via-darling-purple-light h-[50vh] lg:min-h-screen lg:bg-gradient-to-tl lg:from-darling-secondary-purple lg:to-white lg:via-darling-purple-light">
 <div class="p-5">
 <HeaderComp h="1" text="This is Darling" width="10rem" />
 </div>
