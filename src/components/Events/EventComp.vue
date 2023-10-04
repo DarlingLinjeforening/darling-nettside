@@ -15,7 +15,7 @@
           <!-- Right Info -->
           <div class="flex flex-col mx-10">
             <div>
-              <h3>{{ props.title }}</h3>
+              <h3 class="text-lg">{{ props.title }}</h3>
             </div>
             <div class="flex flex-row">
               <div clas="align-baseline">
