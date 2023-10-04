@@ -1,16 +1,32 @@
 <template>
   <!-- Filter section -->
   <section class="mb-2">
-    <h3 class="m-3 font-bold text-2xl">Filter</h3>
-    <form action="">
-      <select name="test" id="test">
-        <option v-for="eventType in eventTypes" :value="eventType.title">
-          {{ eventType.title }}
-        </option>
-      </select>
+    <h3 class="text-2xl font-bold ml-4 mb-2">Filter / Sort</h3>
+    <form action="" class="flex flex-row ml-3">
+      <div
+        @click="switchSort"
+        class="flex justify-center items-center text-xl bg-darling-purple-light w-8 h-8 rounded-md hover:bg-darling-secondary-yellow"
+      >
+        <i class="pi pi-arrow-down" v-if="sortType === 'asc'"></i>
+        <i class="pi pi-arrow-up" v-if="sortType === 'desc'"></i>
+      </div>
+      <div
+        v-for="eventType in eventTypes"
+        class="px-3 flex flex-row-reverse items-center"
+      >
+        <input
+          @change="filterBy"
+          v-model="options"
+          type="checkbox"
+          :value="eventType.title"
+          :id="eventType.title"
+          :name="eventType.title"
+        />
+        <label class="px-1" :for="eventType.title">{{ eventType.title }}</label>
+      </div>
     </form>
   </section>
-  <section>
+  <section class="mb-2">
     <EventComp
       v-for="(event, index) in events"
       :key="event"
@@ -23,6 +39,25 @@
       :dateformat="event.dateformat"
       :altbackground="isOdd(index) ? true : false"
     />
+  </section>
+  <section class="mt-10">
+    <h3 class="text-2xl font-bold ml-4 mb-2">Past events</h3>
+    <details>
+      <summary class="ml-4"></summary>
+
+      <EventComp
+        v-for="(event, index) in oldEvents"
+        :key="event"
+        :title="event.title"
+        :date="event.date"
+        :time="event.time"
+        :location="event.location"
+        :type="event.typeTitle.title"
+        :icon="event.icon"
+        :dateformat="event.dateformat"
+        :altbackground="isOdd(index) ? true : false"
+      />
+    </details>
   </section>
 </template>
 
@@ -46,14 +81,30 @@ const monthNames = [
   "December",
 ];
 
+function compareDates(a, b, ascending = true) {
+  const dateA = a.properDateTime;
+  const dateB = b.properDateTime;
+
+  const comparison = ascending ? 1 : -1;
+
+  if (dateA > dateB) return comparison;
+  if (dateA < dateB) return -comparison;
+  return 0;
+}
+
 export default {
   components: {
     EventComp,
   },
   data() {
     return {
+      allEvents: [],
       events: [],
-      eventTypes: []
+      eventTypes: [],
+      oldEvents: [],
+      options: [],
+      sortType: "desc",
+      newEvents: [],
     };
   },
   mounted() {
@@ -62,8 +113,8 @@ export default {
         '*[_type == "events"]{title, datetime, location, description, "typeTitle":eventtype->{title}, "typeIcon":eventtype->{icon}}'
       )
       .then((data) => {
-        this.events = data;
-        this.events.forEach((event) => {
+        this.allEvents = data;
+        this.allEvents.forEach((event) => {
           // Build an image icon link for the event type icon
           event.icon = builder
             .image(event.typeIcon.icon.asset._ref)
@@ -72,6 +123,7 @@ export default {
 
           // Create a new date object from the Sanity datetime string
           let datetime = new Date(event.datetime);
+          event.properDateTime = datetime;
 
           // Format the date into xx.xx.xxx (Day, Month, Year)
           event.date =
@@ -94,19 +146,33 @@ export default {
             (datetime.getDate() > 9 ? "" : "0") +
             datetime.getDate() +
             " " +
-            monthNames[datetime.getMonth() - 1];
+            monthNames[datetime.getMonth()];
           // Cut the date so it only displays two numbers, a space and three letters of the month.
           event.dateformat = event.dateformat.substring(0, 6);
         });
+
+        const currentDate = new Date();
+        this.events = this.allEvents.filter((event) => {
+          return event.properDateTime >= currentDate;
+        });
+
+        this.newEvents = this.events;
+
+        this.oldEvents = this.allEvents.filter((event) => {
+          return event.properDateTime < currentDate;
+        });
+
+        // Descending date default
+        this.events.sort((a, b) => compareDates(a, b, false));
+        this.oldEvents.sort((a, b) => compareDates(a, b, false));
       });
 
-      this.$sanityClient
-      .fetch(
-        '*[_type == "eventType"]{title}'
-      )
-      .then((data) => {
-        this.eventTypes = data;
-        });
+    this.$sanityClient.fetch('*[_type == "eventType"]{title}').then((data) => {
+      this.eventTypes = data;
+      /*  this.eventTypes.forEach((e) => {
+        this.options.push(e.title);
+      }); */
+    });
   },
   methods: {
     urlFor(source) {
@@ -115,6 +181,35 @@ export default {
     isOdd(number) {
       return !!(number & 1);
     },
+
+    switchSort() {
+      if (this.sortType === "asc") {
+        this.sortType = "desc";
+      } else {
+        this.sortType = "asc";
+      }
+      this.sortBy();
+    },
+
+    filterBy() {
+      if (this.options.length < 1) {
+        this.events = this.newEvents;
+      } else {
+        this.events = this.newEvents.filter((event) => {
+          return this.options.some((e) => event.typeTitle.title === e);
+        });
+      }
+    },
+
+    sortBy() {
+      if (this.sortType === "asc") {
+        this.events.sort((a, b) => compareDates(a, b, true));
+      } else if (this.sortType === "desc") {
+        this.events.sort((a, b) => compareDates(a, b, false));
+      }
+    },
   },
 };
+
+// ! skru ned lemon size på mobil
 </script>
