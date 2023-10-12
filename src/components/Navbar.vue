@@ -19,7 +19,7 @@
           <i :class="(menuOpen ? 'pi pi-times md:hidden text-3xl' : 'pi pi-bars md:hidden text-3xl')"></i>
         </div>
 
-        <ul class="sm:flex flex-row gap-16 mx-0 md:mx-10 hidden">
+        <ul class="md:flex flex-row gap-12 lg:gap-16 mx-0 sm:mx-10 hidden">
           <li>
             <RouterLink class="navlink" to="/">Home</RouterLink>
           </li>
@@ -87,9 +87,28 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
 
-const menuOpen = ref(false);
 </script>
 
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      menuOpen: false, 
+    };
+  },
+  mounted() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.handleResize);
+  },
+  methods: {
+    handleResize() {
+      if (window.innerWidth > 768) {
+        this.menuOpen = false;
+      }
+    },
+  },
+};</script>
