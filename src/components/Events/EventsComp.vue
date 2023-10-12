@@ -1,64 +1,82 @@
 <template>
-  <!-- Filter section -->
-  <section class="mb-2">
-    <h3 class="text-2xl font-bold ml-4 mb-2">Filter / Sort</h3>
-    <form action="" class="flex flex-row ml-3">
-      <div
-        @click="switchSort"
-        class="flex justify-center items-center text-xl bg-darling-purple-light w-8 h-8 rounded-md hover:bg-darling-secondary-yellow"
-      >
-        <i class="pi pi-arrow-down" v-if="sortType === 'asc'"></i>
-        <i class="pi pi-arrow-up" v-if="sortType === 'desc'"></i>
-      </div>
-      <div
-        v-for="eventType in eventTypes"
-        class="px-3 flex flex-row-reverse items-center"
-      >
-        <input
-          @change="filterBy"
-          v-model="options"
-          type="checkbox"
-          :value="eventType.title"
-          :id="eventType.title"
-          :name="eventType.title"
+  <!-- Events section -->
+  <div
+    class="flex flex-col-reverse md:grid md:grid-cols-[70%_minmax(900px,_1fr)_100px]"
+  >
+    <div class="flex-col">
+      <section class="mb-2">
+        <EventComp
+          v-for="(event, index) in events"
+          :key="event"
+          :title="event.title"
+          :date="event.date"
+          :time="event.time"
+          :location="event.location"
+          :type="event.typeTitle.title"
+          :icon="event.icon"
+          :dateformat="event.dateformat"
+          :altbackground="isOdd(index) ? true : false"
         />
-        <label class="px-1" :for="eventType.title">{{ eventType.title }}</label>
+      </section>
+    </div>
+    <!-- Filter section -->
+    <section
+      class="flex flex-col mb-2 bg-darling-purple-light md:w-60 md:h-full"
+    >
+      <div class="p-2">
+        <h3 class="text-2xl font-bold ml-4 mb-2 md:p-2 md:flex md:flex-row-reverse">
+          Filter / Sort
+        </h3>
+        <form action="" class="flex md:flex-col ml-3">
+          <div class="flex flex-row-reverse py-2">
+            <div
+              @click="switchSort"
+              class="flex justify-center items-center text-xl bg-darling-secondary-orange w-8 h-8 rounded-md hover:bg-darling-secondary-yellow"
+            >
+              <i class="pi pi-arrow-down" v-if="sortType === 'asc'"></i>
+              <i class="pi pi-arrow-up" v-if="sortType === 'desc'"></i>
+            </div>
+          </div>
+          <div
+            v-for="eventType in eventTypes"
+            class="flex flex-row-reverse items-center py-1"
+          >
+            <input
+              @change="filterBy"
+              v-model="options"
+              type="checkbox"
+              :value="eventType.title"
+              :id="eventType.title"
+              :name="eventType.title"
+            />
+            <label class="px-1" :for="eventType.title">{{
+              eventType.title
+            }}</label>
+          </div>
+        </form>
       </div>
-    </form>
-  </section>
-  <section class="mb-2">
-    <EventComp
-      v-for="(event, index) in events"
-      :key="event"
-      :title="event.title"
-      :date="event.date"
-      :time="event.time"
-      :location="event.location"
-      :type="event.typeTitle.title"
-      :icon="event.icon"
-      :dateformat="event.dateformat"
-      :altbackground="isOdd(index) ? true : false"
-    />
-  </section>
-  <section class="mt-10">
-    <h3 class="text-2xl font-bold ml-4 mb-2">Past events</h3>
-    <details>
-      <summary class="ml-4"></summary>
+    </section>
+  </div>
+    <!-- Past events section-->
+    <section class="mt-10">
+      <h3 class="text-2xl font-bold ml-4 mb-2">Past events</h3>
+      <details>
+        <summary class="ml-4"></summary>
 
-      <EventComp
-        v-for="(event, index) in oldEvents"
-        :key="event"
-        :title="event.title"
-        :date="event.date"
-        :time="event.time"
-        :location="event.location"
-        :type="event.typeTitle.title"
-        :icon="event.icon"
-        :dateformat="event.dateformat"
-        :altbackground="isOdd(index) ? true : false"
-      />
-    </details>
-  </section>
+        <EventComp
+          v-for="(event, index) in oldEvents"
+          :key="event"
+          :title="event.title"
+          :date="event.date"
+          :time="event.time"
+          :location="event.location"
+          :type="event.typeTitle.title"
+          :icon="event.icon"
+          :dateformat="event.dateformat"
+          :altbackground="isOdd(index) ? true : false"
+        />
+      </details>
+    </section>
 </template>
 
 <script>
