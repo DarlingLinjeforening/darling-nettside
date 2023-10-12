@@ -4,10 +4,10 @@
     <!-- <div> -->
     <div class="flex flex-wrap gap-10">
       <div
-        class="flex flex-col justify-around max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        class="flex flex-col justify-between max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
         <h5
-          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          class="mb-2 text-2xl font-bold tracking-tight text-gray-90"
         >
           Web design
         </h5>
@@ -26,10 +26,10 @@
         </a>
       </div>
       <div
-        class="flex flex-col justify-around max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        class="flex flex-col  justify-between max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
         <h5
-          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          class="mb-2 text-2xl font-bold tracking-tight text-gray-900  "
         >
           Web Development
         </h5>
@@ -50,10 +50,10 @@
         </a>
       </div>
       <div
-        class="flex flex-col justify-around max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        class="flex flex-col  justify-between max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
         <h5
-          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          class="mb-2 text-2xl font-bold tracking-tight text-gray-900  "
         >
           Graphic Design
         </h5>
@@ -75,10 +75,10 @@
       </div>
 
       <div
-        class="flex flex-col justify-around max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        class="flex flex-col  justify-between max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
         <h5
-          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          class="mb-2 text-2xl font-bold tracking-tight text-gray-900  "
         >
           Interaction Design
         </h5>
@@ -98,10 +98,10 @@
         </a>
       </div>
       <div
-        class="flex flex-col justify-around max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        class="flex flex-col  justify-between max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
         <h5
-          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          class="mb-2 text-2xl font-bold tracking-tight text-gray-900  "
         >
           Master's in Interaction Design
         </h5>
