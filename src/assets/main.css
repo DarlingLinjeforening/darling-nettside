@@ -4,6 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.footer-back{
+    background-image: url('/public/images/footer-img-darling.svg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    width:100%;
+    height:300px;
+}
+
 @layer components {
     .navlink {
         @apply hover:underline hover:underline-offset-4;

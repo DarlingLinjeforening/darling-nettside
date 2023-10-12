@@ -3,14 +3,19 @@ import "./assets/main.css";
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
+// Notifications
+import Toast from 'vue-toast-notification'
+import 'vue-toast-notification/dist/theme-default.css'
+
+
 
 // connect to the headless cms - sanity
 import { createClient } from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
 
 const client = createClient({
-  projectId: "55ga7y25",
-  dataset: "production",
+  projectId: '55ga7y25',
+  dataset: 'production',
   useCdn: true, // Enable Content Delivery Network (CDN) for faster responses
 });
 
@@ -25,5 +30,8 @@ function urlFor(source) {
   return builder.image(source);
 }
 
+
+
+app.use(Toast)
 app.use(router);
 app.mount("#app");

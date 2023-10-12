@@ -44,7 +44,7 @@
       };
     },
     mounted() {
-      this.$sanityClient.fetch('*[_type == "members"]{name, role, phoneNumber, email, "imgSrc":image.asset._ref}').then((data) => {
+      this.$sanityClient.fetch('*[_type == "members"]{name, role, phoneNumber, email, "imgSrc":image.asset._ref}| order(rank asc)').then((data) => {
         console.log(data)
         this.headshots = data;
       });
