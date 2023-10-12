@@ -3,7 +3,7 @@
         <div class="w-screen footer-back"></div>
         <div class="flex bg-darling-purple p-16 justify-center gap-20 flex-wrap">
             <div class="text-white">
-                <h3 class="text-center mb-5 font-bold text-lg uppercase">Adresse</h3>
+                <h3 class="text-center mb-5 font-bold text-lg uppercase">Address</h3>
                 <p>Teknologiveien 22, 2815 Gjøvik, Innlandet</p>
             </div>
             <div>
@@ -15,10 +15,10 @@
                     <a href="https://www.linkedin.com/company/darling-linjeforening/"><img
                             src="../../public/images/linkedin-icon.svg" alt="LinkedIn icon"></a>
                 </div>
-                <p class="text-white -mt-5">Følg oss på Instagram, Facebook og LinkedIn!</p>
+                <p class="text-white -mt-5">Follow us on Instagram, Facebook og LinkedIn!</p>
             </div>
             <div>
-                <h3 class="text-white text-center mb-5 font-bold text-lg uppercase">Kontakt</h3>
+                <h3 class="text-white text-center mb-5 font-bold text-lg uppercase">Contact</h3>
                 <p class="text-white">kontakt@darlinglinjeforening.org</p>
             </div>
             <div>
