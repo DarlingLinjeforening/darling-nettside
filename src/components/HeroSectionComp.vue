@@ -1,7 +1,7 @@
 <template>
   <div class="lg:flex lg:flex-row lg:justify-between lg:h-[90vh] ">
-    <div class="flex justify-center flex-col lg:max-w-[40%] lg:h-[20%]">
-      <p class="pl-5 pr-5 pb-3 flex justify-center xl:text-xl xl:max-w-[60ch]">
+    <div class="flex justify-center h-full flex-col lg:max-w-[40%] lg:h-[20%]">
+      <p class="pl-5 pr-5 pb-3 flex justify-center xl:mt-10 xl:text-xl xl:max-w-[60ch]">
         The student organization representing the design courses at NTNU Gjøvik.
         Whether you're a graphic designer, interaction designer, web developer,
         or simply just passionate about design, Darling is your gateway to
