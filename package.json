@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@portabletext/vue": "^1.0.5",
     "@sanity/client": "^6.4.12",
     "@sanity/image-url": "^1.0.2",
     "axios": "^1.5.0",
