@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="m-10 ml-6">
-      <HeaderComp h="1" text="Our Board Members" width="10rem" />
+      <HeaderComp h="1" text="Our Board Members" width="17rem" left="5rem" />
     </div>
     <HeadshotsComp />
     <faq-comp />
