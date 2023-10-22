@@ -1,15 +1,13 @@
 <template>
-  <section class="m-10 ml-6">
-    <HeaderComp h="1" text="Frequently Asked Questions" />
+  <HeaderComp h="1" text="Frequently Asked Questions" />
 
-    <div>
-      <FaqQuestion
-        v-for="item in faq"
-        :question="item.questions"
-        :answer="item.answers"
-      />
-    </div>
-  </section>
+  <div>
+    <FaqQuestion
+      v-for="item in faq"
+      :question="item.questions"
+      :answer="item.answers"
+    />
+  </div>
 </template>
 
 <script>

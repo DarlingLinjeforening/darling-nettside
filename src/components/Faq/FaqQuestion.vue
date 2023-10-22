@@ -1,5 +1,5 @@
 <template>
-  <section class="flex flex-col mx-3 my-5">
+  <section class="flex flex-col my-5">
     <details
       class="border-darling-purple border-2 bg-whit shadow max-w-lg"
       @toggle="updateIcon"
@@ -21,9 +21,6 @@
 
 <script setup>
 const props = defineProps(["question", "answer"]);
-
-
-
 </script>
 
 <script>
