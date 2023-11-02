@@ -2,9 +2,9 @@
   <div class="min-h-screen">
   <div class="w-full lg:text-xl ">
     <aside class="md:bg-darling-purple-light md:w-25 md:min-h-full md:right-0 md:absolute z-0"></aside>
-    <h1 class="text-3xl font-bold flex justify-center md:justify-start md:p-5">
-      Contact us
-    </h1>
+    <div class="p-5">
+      <HeaderComp h="1" text="This is Darling" width="10rem" />
+    </div>
     <p class="flex justify-center p-5 md:justify-start md:w-1/2">
       You can contact us by visiting us, calling us, or sending an email with
       the form below
@@ -24,9 +24,9 @@
 <script>
 import ContactFormComp from "../components/Contact/ContactFormComp.vue";
 import ContactInfoComp from "../components/Contact/ContactInfoComp.vue";
+import HeaderComp from '../components/HeaderComp.vue';
 import LightBackgroundCompVue from "../components/LightBackgroundComp.vue";
-
 export default {
-  components: { ContactFormComp, ContactInfoComp, LightBackgroundCompVue },
+  components: { ContactFormComp, ContactInfoComp, LightBackgroundCompVue, HeaderComp },
 };
 </script>

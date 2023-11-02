@@ -70,6 +70,12 @@ export default {
       console.log(this.email);
       console.log(this.subject);
       console.log(this.message);
+
+      this.name = ""
+      this.email = ""
+      this.subject = ""
+      this.message = ""
+      grecaptcha.reset()
       
 axios.post('https://folk.ntnu.no/haavaala/FormHandling.php', formData)
   .then(response => {
