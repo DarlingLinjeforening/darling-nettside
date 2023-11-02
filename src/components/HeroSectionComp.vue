@@ -13,17 +13,17 @@
       class="hidden lg:w-full lg:flex lg:justify-center lg:items-center lg:right-0 flex-col gap-5 p-5 relative lg:h-[100%]"
     >
       <img
-        class=" hidden lg:flex lg:absolute lg:top-0 lg:w-80 lg:ml-10 lg:z-10 lg:mt-[150px] lg:border-2 lg:border-darling-purple xl:min-w-[250px] xl:mt-[180px] 2xl:mt-[280px] 2xl:min-w-[500px]"
+        class=" hidden lg:flex lg:absolute lg:top-0 lg:w-80 lg:ml-10 lg:z-10 lg:mt-[150px] lg:border-2 lg:border-darling-purple xl:max-h-[400px] xl:object-cover xl:min-w-[250px] xl:mt-[180px] 2xl:mt-[320px] 2xl:min-w-[500px]"
          :src="urlFor(heroImages.image1)"
         alt="image1"
       />
       <img
-        class=" hidden lg:flex lg:absolute lg:top-0 z-0 lg:w-80 lg:border-2 lg:border-darling-purple xl:min-w-[300px] 2xl:min-w-[500px]"
+        class=" hidden lg:flex lg:absolute lg:top-0 z-0 lg:w-80 lg:border-2 lg:border-darling-purple xl:min-w-[300px] xl:object-cover xl:max-h-[400px] 2xl:min-w-[500px]"
         :src="urlFor(heroImages.image2)"
         alt="image2"
       />
       <img
-        class="hidden lg:flex lg:absolute lg:top-0 lg:ml-[300px] lg:z-10 lg:w-72 lg:mt-[100px] lg:border-2 lg:border-darling-purple xl:min-w-[120px] xl:ml-[450px] xl:mt-[100px] 2xl:min-w-[400px] 2xl:ml-[620px]"
+        class="hidden lg:flex lg:absolute lg:top-0 lg:ml-[300px] lg:z-10 lg:w-72 lg:mt-[100px] lg:border-2 lg:border-darling-purple xl:min-w-[120px] xl:object-cover xl:ml-[450px] xl:mt-[100px] 2xl:min-w-[400px] 2xl:ml-[850px]"
         :src="urlFor(heroImages.image3)"
         alt="image3"
       />
