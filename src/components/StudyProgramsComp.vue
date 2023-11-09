@@ -2,22 +2,24 @@
   <section>
     <h2>We represent students in these study programs at NTNU Gjøvik:</h2>
     <!-- <div> -->
-    <div class="flex flex-wrap gap-10">
+    <div class="flex flex-wrap gap-10 justify-center">
       <div
-        class="flex flex-col justify-between max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        class="flex flex-col justify-between max-w-sm p-6 bg-darling-purple-light bg-opacity-20  rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700"
       >
+      <div class="flex justify-between">
         <h5
           class="mb-2 text-2xl font-bold tracking-tight text-gray-90"
         >
           Web design
         </h5>
+        <img src="../../public/images/wrench-icon.png" alt="logo of a wrench" class="w-10">
+      </div>
         <p class="text-gray-700 dark:text-gray-400 mb-5">
           The one-year program in web design provides a fundamental
           understanding of media expression on the internet. The program is
           particularly aimed at those who wish to create media solutions on the
           web and in mobile distribution channels.
         </p>
-        <img src="../../public/images/wrench-icon.png" alt="logo of a wrench" class=" relative top-0 w-8 left-80 right-0">
 
         <a
           target="_blank"
@@ -28,7 +30,7 @@
         </a>
       </div>
       <div
-        class="flex flex-col  justify-between max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        class="flex flex-col  justify-between max-w-sm p-6 bg-white  rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700"
       >
         <h5
           class="mb-2 text-2xl font-bold tracking-tight text-gray-900  "
@@ -52,7 +54,7 @@
         </a>
       </div>
       <div
-        class="flex flex-col  justify-between max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        class="flex flex-col  justify-between max-w-sm p-6 bg-white  rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700"
       >
         <h5
           class="mb-2 text-2xl font-bold tracking-tight text-gray-900  "
@@ -77,7 +79,7 @@
       </div>
 
       <div
-        class="flex flex-col  justify-between max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        class="flex flex-col  justify-between max-w-sm p-6 bg-white  rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700"
       >
         <h5
           class="mb-2 text-2xl font-bold tracking-tight text-gray-900  "
@@ -100,7 +102,7 @@
         </a>
       </div>
       <div
-        class="flex flex-col  justify-between max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        class="flex flex-col  justify-between max-w-sm p-6 bg-white  rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700"
       >
         <h5
           class="mb-2 text-2xl font-bold tracking-tight text-gray-900  "
