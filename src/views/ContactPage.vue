@@ -1,4 +1,4 @@
-<template>
+∑<template>
   <div class="min-h-screen">
     <aside
       class="md:bg-darling-purple-light md:w-25 md:min-h-[110vh] md:right-0 md:absolute -z-10"
@@ -32,7 +32,6 @@ import ContactInfoComp from "../components/Contact/ContactInfoComp.vue";
 import HeaderComp from '../components/HeaderComp.vue';
 import LightBackgroundCompVue from "../components/LightBackgroundComp.vue";
 import SpacingComp from "../components/spacingcomp.vue";
-import HeaderComp from "../components/HeaderComp.vue";
 
 export default {
   components: {
