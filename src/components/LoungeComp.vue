@@ -1,5 +1,5 @@
 <template>
-  <section class="ml-6 prose">
+  <section class="prose">
     <h2>About</h2>
     <div v-if="text.length > 0">
       <PortableText :value="text" />
