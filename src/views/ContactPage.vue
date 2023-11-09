@@ -1,24 +1,25 @@
-∑<template>
+<template>
   <div class="min-h-screen">
-  <aside class="md:bg-darling-purple-light md:w-25 md:min-h-full md:right-0 md:absolute -z-10 "></aside>
-<SpacingComp>
-  <div class="w-full lg:text-xl ">
-    <aside class="md:bg-darling-purple-light md:w-25 md:min-h-full md:right-0 md:absolute z-0"></aside>
-    <div class="p-5">
-      <HeaderComp h="1" text="Contact" width="10rem" />
-    </div>
-    <p class="flex justify-center p-5 md:justify-start md:w-1/2">
-      You can contact us by visiting us, calling us, or sending an email with
-      the form below
-    </p>
-  </div>
-  <div
-    class="flex items-center flex-col pr-5 pl-5 mt-5 mb-5 w-full md:flex-row-reverse md:justify-between md:items-start md:min-h-fit md:z-10 md:relative"
-  >
-    
-      <ContactInfoComp />
-    
-    <ContactFormComp />
+    <aside
+      class="md:bg-darling-purple-light md:w-25 md:min-h-[110vh] md:right-0 md:absolute -z-10"
+    ></aside>
+    <SpacingComp>
+      <div class="w-full lg:text-xl">
+        <HeaderComp h="1" text="Contact us" width="12rem" left="2rem" />
+        <p class="flex justify-center md:justify-start md:w-1/2">
+          You can contact us by visiting us, calling us, or sending an email
+          with the form below
+        </p>
+      </div>
+      <div
+        class="flex items-center flex-col my-5 w-full md:flex-row-reverse md:justify-between md:items-start md:min-h-fit md:gap-[20vw] md:z-10 md:relative"
+      >
+        <!-- <aside
+          class="md:bg-darling-purple-light md:w-25 md:min-h-full md:right-0 md:absolute -z-10"
+        ></aside> -->
+        <ContactInfoComp />
+
+        <ContactFormComp />
       </div>
     </SpacingComp>
 

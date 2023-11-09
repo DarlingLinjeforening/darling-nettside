@@ -11,32 +11,32 @@
         <i class="pi pi-envelope" style="margin-right: 8px"></i
         >{{ contact.email }}
       </p>
+
       <p>
-        <i class="pi pi-phone" style="margin-right: 8px"></i
-        >{{ contact.telephone }}
+        <i class="pi pi-envelope" style="margin-right: 8px"></i
+        >{{ contact.companyEmail }}
       </p>
+
       <p>
         <i class="pi pi-map-marker" style="margin-right: 8px"></i
         >{{ contact.address }}
       </p>
-      <p>
-        <i class="pi pi-clock" style="margin-right: 8px"></i>{{ contact.hours }}
-      </p>
-
     </div>
   </div>
 </template>
 
 <script>
-    export default {
-           data() {
-      return {
-        contact: [],
-      };
-    },
-    mounted() {
-      this.$sanityClient.fetch('*[_type == "contact"]{email, companyEmail, address}').then((data) => {
-        console.log(data)
+export default {
+  data() {
+    return {
+      contact: [],
+    };
+  },
+  mounted() {
+    this.$sanityClient
+      .fetch('*[_type == "contact"]{email, companyEmail, address}')
+      .then((data) => {
+        console.log(data);
         this.contact = data[0];
       });
   },
