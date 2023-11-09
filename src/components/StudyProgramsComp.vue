@@ -17,6 +17,8 @@
           particularly aimed at those who wish to create media solutions on the
           web and in mobile distribution channels.
         </p>
+        <img src="../../public/images/wrench-icon.png" alt="logo of a wrench" class=" relative top-0 w-8 left-80 right-0">
+
         <a
           target="_blank"
           href="https://www.ntnu.edu/studies/aarweb"
