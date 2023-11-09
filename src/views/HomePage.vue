@@ -15,7 +15,7 @@
 <script>
 import HeroSectionComp from "../components/HeroSectionComp.vue";
 import HeaderComp from "../components/HeaderComp.vue";
-import StudyProgramsComp from "../components/StudyProgramsComp.vue";
+import StudyProgramsComp from "../components/StudyPrograms/StudyProgramsComp.vue";
 import SpacingComp from "../components/spacingcomp.vue";
 export default {
   components: { StudyProgramsComp, HeroSectionComp, HeaderComp, SpacingComp },
