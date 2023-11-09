@@ -22,12 +22,14 @@
         <ContactFormComp />
       </div>
     </SpacingComp>
+
   </div>
 </template>
 
 <script>
 import ContactFormComp from "../components/Contact/ContactFormComp.vue";
 import ContactInfoComp from "../components/Contact/ContactInfoComp.vue";
+import HeaderComp from '../components/HeaderComp.vue';
 import LightBackgroundCompVue from "../components/LightBackgroundComp.vue";
 import SpacingComp from "../components/spacingcomp.vue";
 import HeaderComp from "../components/HeaderComp.vue";
@@ -40,5 +42,6 @@ export default {
     SpacingComp,
     HeaderComp,
   },
+
 };
 </script>

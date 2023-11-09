@@ -22,22 +22,21 @@
       <p>
         <i class="pi pi-clock" style="margin-right: 8px"></i>{{ contact.hours }}
       </p>
+
     </div>
   </div>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      contact: [],
-    };
-  },
-  mounted() {
-    this.$sanityClient
-      .fetch('*[_type == "contact"]{email, hours, telephone, address}')
-      .then((data) => {
-        console.log(data);
+    export default {
+           data() {
+      return {
+        contact: [],
+      };
+    },
+    mounted() {
+      this.$sanityClient.fetch('*[_type == "contact"]{email, companyEmail, address}').then((data) => {
+        console.log(data)
         this.contact = data[0];
       });
   },
