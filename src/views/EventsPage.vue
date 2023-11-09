@@ -8,7 +8,7 @@
 <script>
 import EventsComp from "../components/Events/EventsComp.vue";
 import HeaderComp from "../components/HeaderComp.vue";
-import SpacingComp from "../components/spacingcomp.vue";
+import SpacingComp from "../components/SpacingComp.vue";
 export default {
   components: {
     EventsComp,

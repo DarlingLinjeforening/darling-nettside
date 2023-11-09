@@ -31,7 +31,7 @@ import ContactFormComp from "../components/Contact/ContactFormComp.vue";
 import ContactInfoComp from "../components/Contact/ContactInfoComp.vue";
 import HeaderComp from '../components/HeaderComp.vue';
 import LightBackgroundCompVue from "../components/LightBackgroundComp.vue";
-import SpacingComp from "../components/spacingcomp.vue";
+import SpacingComp from "../components/SpacingComp.vue";
 
 export default {
   components: {
