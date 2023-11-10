@@ -4,7 +4,7 @@
     <!-- <div> -->
     <div class="flex flex-wrap gap-10 justify-center">
       <div
-        class="flex flex-col justify-between max-w-sm p-6 bg-darling-purple-light bg-opacity-20  rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700"
+        class="flex flex-col justify-between max-w-sm p-6 bg-darling-purple-light bg-opacity-20  rounded-lg shadow-2xl dark:bg-gray-800 dark:border-gray-700"
       >
       <div class="flex justify-between">
         <h5
@@ -30,7 +30,7 @@
         </a>
       </div>
       <div
-        class="flex flex-col  justify-between max-w-sm p-6 bg-white  rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700"
+        class="flex flex-col  justify-between max-w-sm p-6 bg-white  rounded-lg shadow-2xl dark:bg-gray-800 dark:border-gray-700"
       >
         <h5
           class="mb-2 text-2xl font-bold tracking-tight text-gray-900  "
@@ -54,7 +54,7 @@
         </a>
       </div>
       <div
-        class="flex flex-col  justify-between max-w-sm p-6 bg-white  rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700"
+        class="flex flex-col  justify-between max-w-sm p-6 bg-white  rounded-lg shadow-2xl dark:bg-gray-800 dark:border-gray-700"
       >
         <h5
           class="mb-2 text-2xl font-bold tracking-tight text-gray-900  "
@@ -79,7 +79,7 @@
       </div>
 
       <div
-        class="flex flex-col  justify-between max-w-sm p-6 bg-white  rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700"
+        class="flex flex-col  justify-between max-w-sm p-6 bg-white  rounded-lg shadow-2xl dark:bg-gray-800 dark:border-gray-700"
       >
         <h5
           class="mb-2 text-2xl font-bold tracking-tight text-gray-900  "
@@ -102,7 +102,7 @@
         </a>
       </div>
       <div
-        class="flex flex-col  justify-between max-w-sm p-6 bg-white  rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700"
+        class="flex flex-col  justify-between max-w-sm p-6 bg-white  rounded-lg shadow-2xl dark:bg-gray-800 dark:border-gray-700"
       >
         <h5
           class="mb-2 text-2xl font-bold tracking-tight text-gray-900  "
