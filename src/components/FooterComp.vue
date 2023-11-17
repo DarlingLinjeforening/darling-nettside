@@ -1,7 +1,7 @@
 <template>
     <footer>
         <div class="w-screen footer-back"></div>
-        <div class="flex bg-darling-purple p-16 justify-center gap-20 flex-wrap">
+        <div class="flex bg-darling-purple p-10 justify-center gap-10 flex-wrap">
             <div class="text-white">
                 <h3 class="text-center mb-5 font-bold text-lg uppercase">Address</h3>
                 <p>Teknologiveien 22, 2815 Gjøvik, Innlandet</p>
