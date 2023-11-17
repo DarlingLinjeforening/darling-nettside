@@ -15,7 +15,7 @@
       </div>
 
       <div class="flex flex-row">
-        <div @click="menuOpen = !menuOpen" class="p-2">
+        <div @click="openMenu" class="p-2">
           <i :class="(menuOpen ? 'pi pi-times md:hidden text-3xl' : 'pi pi-bars md:hidden text-3xl')"></i>
         </div>
 
@@ -105,6 +105,11 @@ export default {
     window.removeEventListener('resize', this.handleResize);
   },
   methods: {
+    openMenu(){
+      if (window.innerWidth < 768){ // Make sure we are not in desktop mode
+        this.menuOpen = !this.menuOpen
+      }
+    },
     handleResize() {
       if (window.innerWidth > 768) {
         this.menuOpen = false;
