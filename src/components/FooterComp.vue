@@ -4,7 +4,7 @@
         <div class="flex bg-darling-purple p-10 justify-center gap-10 flex-wrap">
             <div class="text-white">
                 <h3 class="text-center mb-5 font-bold text-lg uppercase">Address</h3>
-                <p>Teknologiveien 22, 2815 Gjøvik, Innlandet</p>
+                <p class="text-center">Teknologiveien 22, 2815 Gjøvik, Innlandet</p>
             </div>
             <div>
                 <div class="flex flex-row justify-center gap-3 -mt-3 mb-10">
@@ -15,14 +15,13 @@
                     <a href="https://www.linkedin.com/company/darling-linjeforening/"><img
                             src="../../public/images/linkedin-icon.svg" alt="LinkedIn icon"></a>
                 </div>
-                <p class="text-white -mt-5">Follow us on Instagram, Facebook og LinkedIn!</p>
+                <p class="text-white -mt-5 text-center">Follow us on Instagram, Facebook og LinkedIn!</p>
             </div>
             <div>
                 <h3 class="text-white text-center mb-5 font-bold text-lg uppercase">Contact</h3>
-                <p class="text-white">kontakt@darlinglinjeforening.org</p>
+                <p class="text-white text-center">kontakt@darlinglinjeforening.org</p>
             </div>
-            <div>
-            </div>
+            <div class="hidden md:block"></div>
         </div>
         <div class="bg-darling-purple-light">
             <div class="flex justify-center -translate-y-4">

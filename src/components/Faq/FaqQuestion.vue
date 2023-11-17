@@ -14,12 +14,13 @@
           {{ props.question }}
         </p>
       </summary>
-      <p class="p-3 border-t-2 border-t-darling-purple">{{ props.answer }}</p>
+      <p class="p-3 border-t-2 border-t-darling-purple"><PortableText :value="props.answer" /></p>
     </details>
   </section>
 </template>
 
 <script setup>
+import { PortableText } from "@portabletext/vue";
 const props = defineProps(["question", "answer"]);
 </script>
 

@@ -11,12 +11,12 @@
           with the form below
         </p>
       </div>
+        <aside
+          class="md:bg-darling-purple-light md:w-25 md:min-h-full md:right-0 md:absolute -z-10"
+        ></aside>
       <div
         class="flex items-center flex-col my-5 w-full md:flex-row-reverse md:justify-between md:items-start md:min-h-fit md:gap-[20vw] md:z-10 md:relative"
       >
-        <!-- <aside
-          class="md:bg-darling-purple-light md:w-25 md:min-h-full md:right-0 md:absolute -z-10"
-        ></aside> -->
         <ContactInfoComp />
 
         <ContactFormComp />

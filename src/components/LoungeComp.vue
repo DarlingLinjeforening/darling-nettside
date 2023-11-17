@@ -26,7 +26,7 @@ export default {
     this.$sanityClient
       .fetch("*[_type == 'pages' && title=='Homepage'][0]")
       .then((data) => {
-        text = data.content;
+        text.value = data.content;
       });
   },
   methods: {

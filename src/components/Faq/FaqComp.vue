@@ -5,7 +5,7 @@
     <FaqQuestion
       v-for="item in faq"
       :question="item.questions"
-      :answer="item.answers"
+      :answer="item.content"
     />
   </div>
 </template>
@@ -27,7 +27,7 @@ export default {
   },
   mounted() {
     this.$sanityClient
-      .fetch('*[_type == "faq"]{questions, answers}')
+      .fetch('*[_type == "faq"]')
       .then((data) => {
         console.log(data);
         this.faq = data;
