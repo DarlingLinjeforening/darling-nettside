@@ -1,10 +1,10 @@
 <template>
   <!-- Events section -->
   <div
-    class="flex flex-col-reverse md:grid md:grid-cols-[70%_minmax(900px,_1fr)_100px]"
+    class="flex flex-col-reverse md:flex-row"
   >
     <div class="flex-col">
-      <section class="mb-2">
+      <section class="mb-2 min-w-[50vw]">
         <EventComp
           v-for="(event, index) in events"
           :key="event"
