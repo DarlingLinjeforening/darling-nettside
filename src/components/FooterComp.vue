@@ -4,7 +4,7 @@
         <div class="flex bg-darling-purple p-10 justify-center gap-10 flex-wrap">
             <div class="text-white">
                 <h3 class="text-center mb-5 font-bold text-lg uppercase">Address</h3>
-                <p class="text-center">Teknologiveien 22, 2815 Gjøvik, Innlandet</p>
+                <p class="text-center hover:underline"><a href="http://maps.google.com/maps?q=Teknologiveien 22, 2815 Gjøvik, Innlandet">Teknologiveien 22, 2815 Gjøvik, Innlandet</a></p>
             </div>
             <div>
                 <div class="flex flex-row justify-center gap-3 -mt-3 mb-10">
@@ -19,7 +19,7 @@
             </div>
             <div>
                 <h3 class="text-white text-center mb-5 font-bold text-lg uppercase">Contact</h3>
-                <p class="text-white text-center">kontakt@darlinglinjeforening.org</p>
+                <p class="text-white text-center hover:underline"><a href="mailto:kontakt@darlinglinjeforening.org">kontakt@darlinglinjeforening.org</a></p>
             </div>
             <div class="hidden md:block"></div>
         </div>

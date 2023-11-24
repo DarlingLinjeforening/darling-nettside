@@ -21,14 +21,14 @@
     </div>
     <!-- Filter section -->
     <section
-      class="flex flex-col mb-2 bg-darling-purple-light md:w-60 md:h-full"
+      class="flex flex-col mb-2 w-60 rounded shadow-2xl bg-white md:w-60 md:h-full"
     >
       <div class="p-2">
         <h3 class="text-2xl font-bold ml-4 mb-2 md:p-2 md:flex md:flex-row-reverse">
           Filter / Sort
         </h3>
-        <form action="" class="flex md:flex-col ml-3">
-          <div class="flex flex-row-reverse py-2">
+        <form action="" class="flex flex-col ml-3">
+          <div class="flex flex-row py-2">
             <div
               @click="switchSort"
               class="flex justify-center items-center text-xl bg-darling-secondary-orange w-8 h-8 rounded-md hover:bg-darling-secondary-yellow"
@@ -39,7 +39,7 @@
           </div>
           <div
             v-for="eventType in eventTypes"
-            class="flex flex-row-reverse items-center py-1"
+            class="flex flex-row items-center py-1"
           >
             <input
               @change="filterBy"

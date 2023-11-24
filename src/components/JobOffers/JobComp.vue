@@ -1,30 +1,42 @@
 <template>
   <div class="py-4">
     <div class="flex flex-col md:flex-row">
-      <img
+        <img
         :src="imgSrc"
         :alt="companyName"
-        class="w-40 h-20 max-w-[240px] max-h-[144px] md:w-60 md:h-36 pr-4"
+        class="min-w-[240px] min-h-[144px] max-w-[240px] max-h-[144px] pr-4"
       />
       <div class="max-w-prose">
-        <p class="font-bold text-xl">{{ position }}</p>
-        <p class="text-sm">{{ description }}</p>
-      </div>
+        <div>
+          <p class="font-bold text-xl">{{ position }}</p>
+          <p class="text-sm">{{ description }}</p>
+        </div>
+        <div class="flex justify-around py-2 md:py-5 flex-wrap">
+          <div>
+            <i class="pi pi-clock align-baseline px-2"></i>
+            <span v-if="deadline" class="align-baseline">{{ deadline }}</span>
+            <span v-else class="align-baseline">As soon as possible</span>
+          </div>
+          <span>|</span>
+          <div>
+            <i class="pi pi-map-marker align-baseline px-2"></i>
+            <span>{{ location }}</span>
+          </div>
+          <span>|</span>
+          <div>
+            <div v-if="jobType === 'fullTime'" class="flex">
+              <!-- <div class="px-2 py-0.5"></div> -->
+              <span>Full time</span>
+            </div>
+            <div v-else-if="jobType === 'partTime'" class="flex">
+              <!-- <div class="px-2 py-0.5"></div> -->
+              <span>Part time</span>
+            </div>
+            <div v-else-if="jobType === 'summer'" class="flex">Summer</div>
+          </div>
+        </div>
     </div>
-    <div class="flex justify-evenly py-2 md:py-5">
-      <div>
-        <i class="pi pi-clock align-baseline p-2"></i>
-        <span v-if="deadline">{{ deadline }}</span>
-        <span v-else>As soon as possible</span>
-      </div>
-      <span>|</span>
-      <div>
-        <i class="pi pi-map-marker align-baseline"></i>
-        {{ location }}
-      </div>
-      <span>|</span>
-      <div>{{ jobType }}</div>
-    </div>
+  </div>
   </div>
 </template>
 

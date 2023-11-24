@@ -4,8 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.footer-back {
-    background-image: url('/public/images/footer-img-darling.svg');
+.footer-back{
+    background-image: url('/images/footer-img-darling.svg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -15,6 +15,20 @@
 .pi {
     display: inline;
 }
+
+.recaptcha-resize{
+    transform:scale(0.77);
+    transform-origin:0 0;
+}
+
+@media screen and (min-width: 640px) {
+    .recaptcha-resize{
+        transform:scale(1);
+        transform-origin:0 0;
+    }
+  }
+
+
 
 @layer components {
     .navlink {
