@@ -19,7 +19,7 @@ function Clean($var)
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     echo '<pre>';
-    print_r($_POST);
+    //print_r($_POST);
     // Get values from POST
     $recaptcha = $_POST['g-recaptcha-response'];
     $name = Clean($_POST['name']);
