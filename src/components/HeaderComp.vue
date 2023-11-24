@@ -10,16 +10,16 @@
 const props = defineProps(["h", "text", "width", "height", "left", "bottom"]);
 
 let width;
-props.width ? (width = props.width) : (width = "24rem");
+props.width ? (width = props.width) : (width = "16rem");
 
-let height;
+let height; 
 props.height ? (height = props.height) : (height = "2rem");
 
 let bottom;
 props.bottom ? (bottom = props.bottom) : (bottom = "1.75rem");
 
 let left;
-props.left ? (left = props.left) : (left = "1.75rem");
+props.left ? (left = props.left) : (left = "2.8rem");
 
 function returnHeading() {
   switch (props.h) {
