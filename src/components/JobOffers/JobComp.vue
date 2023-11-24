@@ -32,6 +32,7 @@
               <!-- <div class="px-2 py-0.5"></div> -->
               <span>Part time</span>
             </div>
+            <div v-else-if="jobType === 'summer'" class="flex">Summer</div>
           </div>
         </div>
       </div>
