@@ -1,10 +1,10 @@
 <template>
-  <div class="py-4 max-w-fit">
+  <div class="py-4">
     <div class="flex flex-col md:flex-row">
-      <img
+        <img
         :src="imgSrc"
         :alt="companyName"
-        class="w-40 h-20 max-w-[240px] max-h-[144px] md:w-60 md:h-36 pr-4"
+        class="min-w-[240px] min-h-[144px] max-w-[240px] max-h-[144px] pr-4"
       />
       <div class="max-w-prose">
         <div>
@@ -35,8 +35,8 @@
             <div v-else-if="jobType === 'summer'" class="flex">Summer</div>
           </div>
         </div>
-      </div>
     </div>
+  </div>
   </div>
 </template>
 
