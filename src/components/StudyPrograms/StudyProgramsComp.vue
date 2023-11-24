@@ -1,8 +1,8 @@
 <template>
   <section>
-    <h2>
+    <!-- <h2>
       We represent students in these study programs at NTNU Gjøvik:
-    </h2>
+    </h2> -->
     <div class="flex justify-center flex-wrap gap-8">
       <StudyProgramComp v-for="studyProgram in studyPrograms"
       :studyProgram="studyProgram.name"

@@ -8,6 +8,9 @@
     <HeroSectionComp />
   </div>
   <!-- <SpacingComp> -->
+    <div class="pt-2 pl-14">
+      <HeaderComp h="2" text="Study programs" width="10rem" />
+    </div>
     <StudyProgramsComp />
   <!-- </SpacingComp> -->
 </template>
