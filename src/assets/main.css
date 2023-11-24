@@ -1,15 +1,19 @@
 @import 'primeicons/primeicons.css';
-@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .footer-back{
     background-image: url('/images/footer-img-darling.svg');
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
-    width:100%;
-    height:300px;
+    width: 100%;
+    height: 300px;
+}
+
+.pi {
+    display: inline;
 }
 
 .recaptcha-resize{
@@ -31,7 +35,7 @@
         @apply hover:underline hover:underline-offset-4;
     }
 
-    #gradient{
+    #gradient {
         background-image: linear-gradient(
             50deg,
             hsl(261deg 43% 85%) 0%,
@@ -45,6 +49,6 @@
             hsl(259deg 34% 87%) 64%,
             hsl(262deg 17% 91%) 86%,
             hsl(0deg 0% 95%) 100%
-          );
+        );
     }
 }
