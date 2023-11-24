@@ -3,12 +3,12 @@
     <aside
       class="md:bg-darling-purple-light md:w-25 md:min-h-[110vh] md:right-0 md:absolute -z-10"
     ></aside>
-    <SpacingComp>
+    <ContactSpacingComp>
       <div class="w-full lg:text-xl max-w-[100%]">
         <HeaderComp h="1" text="Contact us" width="12rem" left="2rem" />
         <p class="flex justify-center md:justify-start md:w-1/2">
-          You can contact us by visiting us, calling us, or sending an email
-          with the form below
+          You can contact us by visiting us or sending an email
+          with the form below.
         </p>
       </div>
         <aside
@@ -21,7 +21,7 @@
 
         <ContactFormComp />
       </div>
-    </SpacingComp>
+    </ContactSpacingComp>
 
   </div>
 </template>
@@ -31,14 +31,14 @@ import ContactFormComp from "../components/Contact/ContactFormComp.vue";
 import ContactInfoComp from "../components/Contact/ContactInfoComp.vue";
 import HeaderComp from '../components/HeaderComp.vue';
 import LightBackgroundCompVue from "../components/LightBackgroundComp.vue";
-import SpacingComp from "../components/SpacingComp.vue";
+import ContactSpacingComp from "../components/Contact/ContactSpacingComp.vue";
 
 export default {
   components: {
     ContactFormComp,
     ContactInfoComp,
     LightBackgroundCompVue,
-    SpacingComp,
+    ContactSpacingComp,
     HeaderComp,
   },
 
