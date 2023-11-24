@@ -1,8 +1,7 @@
 <template>
   <section>
-    <h2>
-      We represent students in these study programs at NTNU Gjøvik:
-    </h2>
+    <HeaderComp h="2" text="Study Programs"/>
+
     <div class="flex flex-wrap gap-10">
       <StudyProgramComp v-for="studyProgram in studyPrograms"
       :studyProgram="studyProgram.name"
@@ -15,10 +14,14 @@
 
 <script>
   import StudyProgramComp from './StudyProgramComp.vue';
+  import HeaderComp from '../HeaderComp.vue';
+
 
   export default {
     components: {
-      StudyProgramComp
+      StudyProgramComp, 
+      HeaderComp
+
     },
     data() {
       return {

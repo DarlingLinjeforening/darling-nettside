@@ -4,7 +4,7 @@
       class="md:bg-darling-purple-light md:w-25 md:min-h-[110vh] md:right-0 md:absolute -z-10"
     ></aside>
     <SpacingComp>
-      <div class="w-full lg:text-xl">
+      <div class="w-full lg:text-xl max-w-[100%]">
         <HeaderComp h="1" text="Contact us" width="12rem" left="2rem" />
         <p class="flex justify-center md:justify-start md:w-1/2">
           You can contact us by visiting us, calling us, or sending an email

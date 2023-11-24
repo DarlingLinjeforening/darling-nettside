@@ -1,5 +1,5 @@
 <template>
-  <HeaderComp h="1" text="Frequently Asked Questions" />
+  <HeaderComp h="2" text="Frequently Asked Questions" />
 
   <div>
     <FaqQuestion

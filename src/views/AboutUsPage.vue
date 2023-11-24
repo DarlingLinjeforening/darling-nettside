@@ -1,6 +1,7 @@
 <template>
   <SpacingComp>
-    <HeaderComp h="1" text="Our Board Members" width="17rem" left="5rem" />
+    <HeaderComp h="1" text="About Us"/>
+    <HeaderComp h="2" text="Our Board Members"/>
     <HeadshotsComp />
     <faq-comp />
     <lounge-comp />
