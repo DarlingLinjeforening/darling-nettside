@@ -1,8 +1,6 @@
 <template>
   <section>
-    <HeaderComp h="2" text="Study Programs"/>
-
-    <div class="flex flex-wrap gap-10">
+    <div class="flex justify-center flex-wrap gap-8">
       <StudyProgramComp v-for="studyProgram in studyPrograms"
       :studyProgram="studyProgram.name"
       :description="studyProgram.description"
@@ -14,13 +12,10 @@
 
 <script>
   import StudyProgramComp from './StudyProgramComp.vue';
-  import HeaderComp from '../HeaderComp.vue';
-
 
   export default {
     components: {
-      StudyProgramComp, 
-      HeaderComp
+      StudyProgramComp,
 
     },
     data() {
