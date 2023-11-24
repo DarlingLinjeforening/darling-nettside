@@ -2,7 +2,7 @@
   <div class="z-1" v-html="returnHeading()"></div>
   <div
     :style="{ width: width, height: height, bottom: bottom, left: left }"
-    class="relative bg-darling-purple-light -z-10 bg-opacity-50 max-w-screen-sm"
+    class="relative bg-darling-purple-light -z-10 bg-opacity-50 max-w-[60vw]"
   ></div>
 </template>
 
