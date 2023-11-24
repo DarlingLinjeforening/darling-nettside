@@ -7,17 +7,20 @@
     </div>
     <HeroSectionComp />
   </div>
-  <SpacingComp>
+  <!-- <SpacingComp> -->
+    <div class="pt-2 pl-14">
+      <HeaderComp h="2" text="Study programs" width="10rem" />
+    </div>
     <StudyProgramsComp />
-  </SpacingComp>
+  <!-- </SpacingComp> -->
 </template>
 
 <script>
 import HeroSectionComp from "../components/HeroSectionComp.vue";
 import HeaderComp from "../components/HeaderComp.vue";
 import StudyProgramsComp from "../components/StudyPrograms/StudyProgramsComp.vue";
-import SpacingComp from "../components/SpacingComp.vue";
+// import SpacingComp from "../components/SpacingComp.vue";
 export default {
-  components: { StudyProgramsComp, HeroSectionComp, HeaderComp, SpacingComp },
+  components: { StudyProgramsComp, HeroSectionComp, HeaderComp },
 };
 </script>
