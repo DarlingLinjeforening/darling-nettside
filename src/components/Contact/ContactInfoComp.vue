@@ -10,19 +10,19 @@
       <div class="flex flex-row">
         <p class="flex flex-row text-sm min-[320px]:text-base md:text-lg">
           <i class="pi pi-envelope" style="margin-right: 8px"></i
-          >{{ contact.email }}
+          ><a class="hover:underline" :href="'mailto:' + contact.email">{{ contact.email }}</a>
         </p>
       </div>
       <div>
         <p class="flex flex-row text-sm min-[320px]:text-base md:text-lg">
           <i class="pi pi-envelope" style="margin-right: 8px"></i
-          >{{ contact.companyEmail }}
+          ><a class="hover:underline" :href="'mailto:' + contact.companyEmail">{{ contact.companyEmail }}</a>
         </p>
       </div>
       <div>
         <p class="flex flex-row text-sm min-[320px]:text-base md:text-lg">
           <i class="pi pi-map-marker" style="margin-right: 8px"></i
-          >{{ contact.address }}
+          ><a class="hover:underline" :href="'https://maps.google.com/?q=' + contact.address"> {{ contact.address }}</a>
         </p>
       </div>
     </div>
