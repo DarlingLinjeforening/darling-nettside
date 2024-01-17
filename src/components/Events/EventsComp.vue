@@ -1,8 +1,6 @@
 <template>
   <!-- Events section -->
-  <div
-    class="flex flex-col-reverse md:flex-row"
-  >
+  <div class="flex flex-col-reverse md:flex-row">
     <div class="flex-col">
       <section class="mb-2 min-w-[50vw]">
         <EventComp
@@ -17,77 +15,90 @@
           :dateformat="event.dateformat"
           :altbackground="isOdd(index) ? true : false"
         />
-        <p v-if="events.length < 1">
-        There are no upcoming events.</p>
+        <p v-if="events.length < 1">There are no upcoming events.</p>
       </section>
     </div>
     <!-- Filter section -->
     <section
-      class="flex flex-col mb-2 w-60 rounded shadow-2xl bg-white md:w-60 md:h-full"
+      class="flex flex-col mb-2 rounded shadow-2xl bg-white md:w-60 md:h-full w-full"
     >
       <div class="p-2">
-        <h3 class="text-2xl font-bold ml-4 mb-2 md:p-2 md:flex md:flex-row-reverse">
-          Filter / Sort
-        </h3>
         <form action="" class="flex flex-col ml-3">
-          <div class="flex flex-row py-2">
-            <div tabindex="0"
-              @click="switchSort" @keyup.enter="switchSort"
-              class="flex justify-center items-center text-xl bg-darling-secondary-orange w-8 h-8 rounded-md hover:bg-darling-secondary-yellow"
-            >
-              <i class="pi pi-arrow-down" v-if="sortType === 'asc'"></i>
-              <i class="pi pi-arrow-up" v-if="sortType === 'desc'"></i>
+          <div class="flex flex-row [&>*]:px-3 md:flex-col">
+            <div class="flex flex-col justify-center items-center md:justify-start md:items-start md:flex-row">
+              <h3
+                class="text-2xl font-bold md:p-2 md:flex md:flex-row-reverse text-center md:text-left"
+              >
+                Filter / Sort
+              </h3>
+              <div class="flex flex-row py-2">
+                <div
+                  tabindex="0"
+                  @click="switchSort"
+                  @keyup.enter="switchSort"
+                  class="flex justify-center items-center text-xl bg-darling-secondary-orange w-8 h-8 md:w-6 md:h-6 md:text-base rounded-md hover:bg-darling-secondary-yellow"
+                >
+                  <i class="pi pi-arrow-down" v-if="sortType === 'asc'"></i>
+                  <i class="pi pi-arrow-up" v-if="sortType === 'desc'"></i>
+                </div>
+              </div>
             </div>
-          </div>
-          <div
-            v-for="eventType in eventTypes"
-            class="flex flex-row items-center py-1"
-          >
-            <input
-              @change="filterBy"
-              v-model="options"
-              type="checkbox"
-              :value="eventType.title"
-              :id="eventType.title"
-              :name="eventType.title"
-            />
-            <label class="px-1" :for="eventType.title">{{
-              eventType.title
-            }}</label>
+            <div class="flex flex-col">
+              <div
+                v-for="eventType in eventTypes"
+                class="flex flex-row items-center py-1"
+              >
+                <input
+                  @change="filterBy"
+                  v-model="options"
+                  type="checkbox"
+                  :value="eventType.title"
+                  :id="eventType.title"
+                  :name="eventType.title"
+                />
+                <label
+                  class="flex flex-row px-1 items-center"
+                  :for="eventType.title"
+                  ><img
+                    :src="urlFor(eventType.icon).url()"
+                    :alt="eventType.title"
+                    class="align-baselien w-4 h-4 mr-1"
+                  />{{ eventType.title }}</label
+                >
+              </div>
+            </div>
           </div>
         </form>
       </div>
     </section>
   </div>
-    <!-- Past events section-->
-    <section class="mt-10">
-      <h3 class="text-2xl font-bold ml-4 mb-2">Past events</h3>
-      <details>
-        <summary class="ml-4"></summary>
+  <!-- Past events section-->
+  <section class="mt-10">
+    <h3 class="text-2xl font-bold ml-4 mb-2">Past events</h3>
+    <details>
+      <summary class="ml-4"></summary>
 
-        <EventComp
-          v-for="(event, index) in oldEvents"
-          :key="event"
-          :title="event.title"
-          :date="event.date"
-          :time="event.time"
-          :location="event.location"
-          :type="event.typeTitle.title"
-          :icon="event.icon"
-          :dateformat="event.dateformat"
-          :altbackground="isOdd(index) ? true : false"
-        />
-        <p v-if="oldEvents.length < 1">
-        There are no past events.</p>
-      </details>
-    </section>
+      <EventComp
+        v-for="(event, index) in oldEvents"
+        :key="event"
+        :title="event.title"
+        :date="event.date"
+        :time="event.time"
+        :location="event.location"
+        :type="event.typeTitle.title"
+        :icon="event.icon"
+        :dateformat="event.dateformat"
+        :altbackground="isOdd(index) ? true : false"
+      />
+      <p v-if="oldEvents.length < 1">There are no past events.</p>
+    </details>
+  </section>
 </template>
 
 <script>
 import { builder } from "@/main";
 import EventComp from "./EventComp.vue";
 
-// Thx to: https://stackoverflow.com/questions/1643320/get-month-name-from-date
 const monthNames = [
   "January",
   "February",
@@ -189,12 +200,15 @@ export default {
         this.oldEvents.sort((a, b) => compareDates(a, b, true));
       });
 
-    this.$sanityClient.fetch('*[_type == "eventType"]{title}').then((data) => {
-      this.eventTypes = data;
-      /*  this.eventTypes.forEach((e) => {
+    this.$sanityClient
+      .fetch('*[_type == "eventType"]{title, icon}')
+      .then((data) => {
+        this.eventTypes = data;
+        console.log(this.eventTypes);
+        /*  this.eventTypes.forEach((e) => {
         this.options.push(e.title);
       }); */
-    });
+      });
   },
   methods: {
     urlFor(source) {
