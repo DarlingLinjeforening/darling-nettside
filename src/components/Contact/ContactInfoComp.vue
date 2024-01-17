@@ -40,7 +40,6 @@ export default {
     this.$sanityClient
       .fetch('*[_type == "contact"]{email, companyEmail, address}')
       .then((data) => {
-        console.log(data);
         this.contact = data[0];
       });
   },
