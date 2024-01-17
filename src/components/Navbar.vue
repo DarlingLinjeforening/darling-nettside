@@ -70,13 +70,13 @@
         </ul>
         <!-- Social icons -->
         <div class="pt-32 pl-8 text-white font-bold text-3xl flex flex-col [&>a]:py-2 ">
-          <a href="https://www.instagram.com/darling.linjeforening/">
+          <a :href="this.socials[1]">
             <i class="pi pi-instagram py-2 text-5xl"></i>
           </a>
-          <a href="https://www.facebook.com/darling.linjeforening/">
+          <a :href="this.socials[2]">
             <i class="pi pi-facebook py-2 text-5xl"></i>
           </a>
-          <a href="https://www.linkedin.com/company/darling-linjeforening/">
+          <a :href="this.socials[0]">
             <i class="pi pi-linkedin py-2 text-5xl"></i>
           </a>
         </div>
@@ -92,20 +92,26 @@ export default {
   data() {
     return {
       menuOpen: false,
+      socials: [],
     };
   },
   mounted() {
-    window.addEventListener("resize", this.handleResize);
+    this.$sanityClient
+      .fetch('*[_type == "contact"]{socials}')
+      .then((data) => {
+        this.socials = data[0].socials;
+
+      });
+    window.addEventListener('resize', this.handleResize);
     this.handleResize();
   },
   beforeDestroy() {
-    window.removeEventListener("resize", this.handleResize);
+    window.removeEventListener('resize', this.handleResize);
   },
   methods: {
-    openMenu() {
-      if (window.innerWidth < 768) {
-        // Make sure we are not in desktop mode
-        this.menuOpen = !this.menuOpen;
+    openMenu(){
+      if (window.innerWidth < 768){ // Make sure we are not in desktop mode
+        this.menuOpen = !this.menuOpen
       }
     },
     handleResize() {
@@ -114,5 +120,4 @@ export default {
       }
     },
   },
-};
-</script>
+};</script>
