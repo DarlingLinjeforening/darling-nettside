@@ -25,7 +25,7 @@
       <div class="p-2">
         <form action="" class="flex flex-col ml-3">
           <div class="flex flex-row [&>*]:px-3 md:flex-col">
-            <div class="flex flex-col justify-center items-center md:justify-start md:items-start md:flex-row">
+            <div class="flex flex-col justify-center items-center md:justify-start md:flex-row ">
               <h3
                 class="text-2xl font-bold md:p-2 md:flex md:flex-row-reverse text-center md:text-left"
               >
