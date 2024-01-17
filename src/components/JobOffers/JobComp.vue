@@ -4,7 +4,7 @@
         <img
         :src="imgSrc"
         :alt="companyName"
-        class="min-w-[240px] min-h-[144px] max-w-[240px] max-h-[144px] pr-4"
+        class="min-w-[240px] min-h-[144px] max-w-[240px] max-h-[144px] pr-4 object-contain"
       />
       <div class="max-w-prose">
         <div>
