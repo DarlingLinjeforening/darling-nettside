@@ -17,6 +17,8 @@
           :dateformat="event.dateformat"
           :altbackground="isOdd(index) ? true : false"
         />
+        <p v-if="events.length < 1">
+        There are no upcoming events.</p>
       </section>
     </div>
     <!-- Filter section -->
@@ -75,6 +77,8 @@
           :dateformat="event.dateformat"
           :altbackground="isOdd(index) ? true : false"
         />
+        <p v-if="oldEvents.length < 1">
+        There are no past events.</p>
       </details>
     </section>
 </template>
