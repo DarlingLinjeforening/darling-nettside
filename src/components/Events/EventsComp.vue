@@ -29,8 +29,8 @@
         </h3>
         <form action="" class="flex flex-col ml-3">
           <div class="flex flex-row py-2">
-            <div
-              @click="switchSort"
+            <div tabindex="0"
+              @click="switchSort" @keyup.enter="switchSort"
               class="flex justify-center items-center text-xl bg-darling-secondary-orange w-8 h-8 rounded-md hover:bg-darling-secondary-yellow"
             >
               <i class="pi pi-arrow-down" v-if="sortType === 'asc'"></i>
