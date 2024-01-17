@@ -10,8 +10,8 @@
       </div>
 
       <div class="flex flex-row">
-        <div @click="openMenu" class="p-2">
-          <i :class="menuOpen
+        <div @click="openMenu" @keyup.enter="openMenu" class="p-2">
+          <i tabindex="0" :class="menuOpen
               ? 'pi pi-times md:hidden text-3xl'
               : 'pi pi-bars md:hidden text-3xl'
             "></i>
@@ -49,23 +49,23 @@
         </div>
         <ul class="flex flex-col items-end p-3 pr-6 text-3xl font-bold gap-5 text-white mt-4">
           <li>
-            <RouterLink @click="menuOpen = false" to="/">Home</RouterLink>
+            <RouterLink @keyup.enter="menuOpen = false" @click="menuOpen = false" to="/">Home</RouterLink>
           </li>
 
           <li>
-            <RouterLink @click="menuOpen = false" to="/events">Events</RouterLink>
+            <RouterLink @keyup.enter="menuOpen = false" @click="menuOpen = false" to="/events">Events</RouterLink>
           </li>
 
           <li>
-            <RouterLink @click="menuOpen = false" to="/about">About us</RouterLink>
+            <RouterLink @keyup.enter="menuOpen = false" @click="menuOpen = false" to="/about">About us</RouterLink>
           </li>
 
           <li>
-            <RouterLink @click="menuOpen = false" to="/job-offers">Job offers</RouterLink>
+            <RouterLink @keyup.enter="menuOpen = false" @click="menuOpen = false" to="/job-offers">Job offers</RouterLink>
           </li>
 
           <li>
-            <RouterLink @click="menuOpen = false" to="/contact">Contact</RouterLink>
+            <RouterLink @keyup.enter="menuOpen = false" @click="menuOpen = false" to="/contact">Contact</RouterLink>
           </li>
         </ul>
         <!-- Social icons -->
