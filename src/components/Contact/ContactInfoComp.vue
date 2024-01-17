@@ -2,7 +2,7 @@
   <!-- Old styles for outer div, can be removed if no longer needed -->
   <!-- class="h-56 w-80 bg-darling-purple flex justify-center text-white rounded-xl md:h-96 md:w-80 lg:w-2/6 lg:h-31 lg:rounded-xl xl:mr-20" -->
   <div
-    class="bg-darling-purple md:max-w-[90%] text-white [&>*]:px-1 min-[320px]:[&>*]:px-10 md:[&>*]:px-10 [&>*]:py-16 rounded-xl h-min"
+    class=" p-3 max-w-[100%] bg-darling-purple md:max-w-[50%] text-white [&>*]:px-5 sm:[&>*]:px-10 min-[320px]:[&>*]:px-2 md:[&>*]:px-10 [&>*]:py-12 rounded-xl h-min lg:max-w-[50%]"
   >
     <div
       class="flex flex-col gap-3 justify-center md:gap-10 lg:gap-12 lg:text-lg"
