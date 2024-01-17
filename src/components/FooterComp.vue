@@ -13,13 +13,13 @@
       </div>
       <div>
         <div class="flex flex-row justify-center gap-3 -mt-3 mb-10">
-          <a href="https://www.instagram.com/darling.linjeforening/"
+          <a :href="this.socials[1]"
             ><img src="/images/instagram-icon.svg" alt="Instagram icon"
           /></a>
-          <a href="https://www.facebook.com/darling.linjeforening"
+          <a :href="this.socials[2]"
             ><img src="/images/facebook-icon.svg" alt="Facebook icon"
           /></a>
-          <a href="https://www.linkedin.com/company/darling-linjeforening/"
+          <a :href="this.socials[0]"
             ><img src="/images/linkedin-icon.svg" alt="LinkedIn icon"
           /></a>
         </div>
@@ -65,13 +65,15 @@ export default {
   data() {
     return {
       contact: [],
+      socials: [],
     };
   },
   mounted() {
     this.$sanityClient
-      .fetch('*[_type == "contact"]{email, address}')
+      .fetch('*[_type == "contact"]{email, address, socials}')
       .then((data) => {
         this.contact = data[0];
+        this.socials = data[0].socials;
       });
   },
   methods: {
