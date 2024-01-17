@@ -14,7 +14,12 @@
           {{ props.question }}
         </p>
       </summary>
-      <p class="p-3 border-t-2 border-t-darling-purple"><PortableText :value="props.answer" /></p>
+      <div
+        class="p-3 border-t-2 border-t-darling-purple"
+        v-if="props.answer.length > 0"
+      >
+        <PortableText :value="props.answer" />
+      </div>
     </details>
   </section>
 </template>
