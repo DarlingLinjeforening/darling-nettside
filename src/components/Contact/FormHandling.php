@@ -5,15 +5,18 @@
  * @link      https://darlinglinjeforening.org
  */
 
-header("Access-Control-Allow-Origin: *"); // To be fixed in the future (darlinglinjeforening.org)
+header("Access-Control-Allow-Origin: https://www.darlinglinjeforening.org");
 header("Access-Control-Allow-Headers: Cache-Control, Pragma, Origin, Authorization, Content-Type, X-Requested-With");
 header("Access-Control-Allow-Methods: GET, PUT, POST");
 
-function Clean($var)
-{
-    // $var = htmlentities($var,ENT_QUOTES); - Don't know if this is needed?
+function clean($var, $ent = false){
     $var = strip_tags($var);
     $var = stripslashes($var);
+
+    if ($ent){
+        $var = htmlentities($var,ENT_QUOTES);
+    }
+
     return $var;
 }
 
@@ -22,22 +25,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     //print_r($_POST);
     // Get values from POST
     $recaptcha = $_POST['g-recaptcha-response'];
-    $name = Clean($_POST['name']);
-    $mailFrom = Clean($_POST['email']);
-    $message = Clean($_POST['message']);
-    $mailTo = "halarsen4@gmail.com";
-    $subject = Clean($_POST['subject']);
+    $name = clean($_POST['name']);
+    $mailFrom = clean($_POST['email']);
+    $message = clean($_POST['message'], true);
+    $mailTo = "kontakt@darlinglinjeforening.org";
+    $subject = clean($_POST['subject'], true);
     $txt = "You have received an email from " . $mailFrom . ".\n\n" . $message;
-    $headers = 'From: DarlingNettside' . "\r\n" .
+    $headers = 'From: Darling Linjeforening nettside (kontakt-siden)' . "\r\n" .
         'Reply-To: ' . $mailFrom . "\r\n" .
         'X-Mailer: PHP/' . PHP_VERSION;
-
-    // Define mail things
-    // $mailTo = "halarsen4@gmail.com";
-    // $txt = "You have recieved an email from " . $mailFrom . " .\n\n" . $message;
-    // $headers = 'From: Darling Nettside (kontakt)' . "\r\n" .
-    //     'Reply-To: ' . $mailFrom . "\r\n" .
-    //     'X-Mailer: PHP/' . PHP_VERSION;
 
     // Captcha secret key
     $sk = '6LdXwkUoAAAAAPgRekSL94DCUp7arN69Db_YPIcL';
@@ -92,5 +88,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         echo ("Failed to send email.");
     }
 } else {
-    echo "Invalid request method.";
+    echo "Invalid method.";
 }
