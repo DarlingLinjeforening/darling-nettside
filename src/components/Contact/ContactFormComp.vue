@@ -1,7 +1,7 @@
 <template>
   <div class="mt-12 md:mt-5">
     <form
-      class="flex content-center p-2 flex-col w-[80vw] md:w-96 lg:w-96 lg:text-xl"
+      class="flex content-center p-2 flex-col sm:max-w-[50vw] w-[80vw] md:w-72 lg:w-96 lg:text-xl"
       @submit.prevent="submitForm"
     >
       <label for="name">Name:</label>

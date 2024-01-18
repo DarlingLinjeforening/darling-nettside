@@ -17,6 +17,10 @@
             <div>
               <h3 class="text-lg">{{ props.title }}</h3>
             </div>
+            <div class="flex flex-row items-center py-2">
+                <img :src="props.icon" :alt="props.type" class="align-baselien w-4 h-4 mr-1" />
+                {{ props.type }}
+            </div>
             <div class="flex flex-row">
               <div clas="align-baseline">
                 <i class="pi pi-clock align-baseline"></i> {{ props.time }}
@@ -28,10 +32,6 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- Event type icon (right side)-->
-        <div class="flex items-center">
-          <img :src="props.icon" :alt="props.type" class="w-16 h-16" />
         </div>
       </div>
     </section>

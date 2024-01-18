@@ -187,7 +187,7 @@
   resolved "https://registry.yarnpkg.com/@portabletext/types/-/types-2.0.8.tgz#34aec838701482f838bdd0ee07a9e31dc01a9230"
   integrity sha512-eiq9/kMX2bYezS4/kLFk3xNnruCFjCDdw6aYEv5ECHVKkYROiuLd3/AsP5d7tWF3+kPPy6tB0Wq8aqDG/URHGA==
 
-"@portabletext/vue@^1.0.5":
+"@portabletext/vue@^1.0.6":
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@portabletext/vue/-/vue-1.0.6.tgz#0f2139255fbecc84bc146dbc1e1b9a3e3987e3c5"
   integrity sha512-YQsrZUpJG8D+SLBBUicFa0Nvhe5S6zI6XbomO316YDKe3EAqvkM0NNDlgRP6WcQIM+ZRZhfAon15PBI5DUDB8g==
