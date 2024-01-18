@@ -3,7 +3,7 @@
     <div class="flex justify-center h-full flex-col lg:max-w-[60%]">
       <div class="pl-5 pr-5 pb-3 flex flex-col lg:h-[60%]">
         <HeaderComp h="1" text="This is Darling" width="18em" />
-        <p class="xl:text-xl lg:max-w-[60ch]">
+        <p class="xl:text-xl lg:max-w-[60ch] pb-3 pt-2">
           The student organization representing the design courses at NTNU Gjøvik.
           Whether you're a graphic designer, interaction designer, web developer,
           or simply just passionate about design, Darling is your gateway to
