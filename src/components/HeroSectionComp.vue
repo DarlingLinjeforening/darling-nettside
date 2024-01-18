@@ -1,16 +1,19 @@
 <template>
-  <div class="lg:flex lg:flex-row lg:justify-between lg:h-[90vh] ">
-    <div class="flex justify-center h-full flex-col lg:max-w-[40%] lg:h-[40%]">
-      <p class="pl-5 pr-5 pb-3 flex justify-center xl:mt-10 xl:text-xl xl:max-w-[60ch]">
-        The student organization representing the design courses at NTNU Gjøvik.
-        Whether you're a graphic designer, interaction designer, web developer,
-        or simply just passionate about design, Darling is your gateway to
-        success.
-      </p>
-      <hero-section-button-comp-vue></hero-section-button-comp-vue>
+  <div class="lg:flex lg:flex-row lg:justify-between lg:h-[90vh] lg:min-h-[700px] py-20 px-10 lg:py-0 gap-x-20 items-center">
+    <div class="flex justify-center h-full flex-col lg:max-w-[60%]">
+      <div class="pl-5 pr-5 pb-3 flex flex-col lg:h-[60%]">
+        <HeaderComp h="1" text="This is Darling" width="18em" />
+        <p class="xl:text-xl lg:max-w-[60ch]">
+          The student organization representing the design courses at NTNU Gjøvik.
+          Whether you're a graphic designer, interaction designer, web developer,
+          or simply just passionate about design, Darling is your gateway to
+          success.
+        </p>
+        <hero-section-button-comp-vue></hero-section-button-comp-vue>
+      </div>
     </div>
-    <div
-      class="hidden lg:w-full lg:flex lg:justify-center lg:items-center lg:right-0 flex-col gap-5 p-5 relative lg:h-[100%]"
+<!--     <div
+      class="hidden lg:w-full lg:flex lg:justify-center lg:items-center lg:right-0 flex-col gap-5 p-5 relative lg:h-[60%]"
     >
       <img
         class=" hidden lg:flex lg:absolute lg:top-0 lg:w-80 lg:ml-10 lg:z-10 lg:mt-[150px] lg:border-2 lg:border-darling-purple xl:min-w-[120px] xl:mt-[180px] 2xl:mt-[280px] 2xl:min-w-[250px]"
@@ -27,16 +30,40 @@
         :src="urlFor(heroImages.image3)"
         alt="image3"
       />
+    </div> -->
+
+    
+  <div class="hidden lg:block lg:w-[70%] lg:justify-center lg:relative lg:p-10">
+      <!-- lg:ml-10 lg:z-10 lg:mt-[150px] lg:border-2 lg:border-darling-purple xl:min-w-[120px] xl:mt-[180px] 2xl:mt-[280px] 2xl:min-w-[250px] -->
+      <img
+        class="lg:absolute lg:aspect-[4/3] lg:w-[50%] lg:border-4 lg:border-darling-purple-light bottom-0 left-0"
+         :src="urlFor(heroImages.image1)"
+        alt="image1"
+      />
+      <!-- lg:border-2 lg:border-darling-purple xl:min-w-[120px] 2xl:min-w-[250px] -->
+      <img
+        class="lg:absolute lg:z-10 lg:aspect-[4/3] lg:w-[50%] lg:border-4 lg:border-darling-purple-light right-[30px] bottom-[-70px]"
+        :src="urlFor(heroImages.image2)"
+        alt="image2"
+      />
+      <!-- lg:ml-[300px] lg:z-10 lg:w-72 lg:mt-[100px] lg:border-2 lg:border-darling-purple xl:min-w-[120px] xl:ml-[450px] xl:mt-[100px] 2xl:min-w-[250px] 2xl:ml-[620px] -->
+      <img
+        class="lg:absolute lg:z-5 lg:aspect-[4/3] lg:w-[50%] lg:border-4 lg:border-darling-purple-light top-[0px] left-[50px]"
+        :src="urlFor(heroImages.image3)"
+        alt="image3"
+      />
     </div>
+
   </div>
 </template>
 
 <script>
 import HeroSectionButtonCompVue from "./HeroSectionButtonComp.vue";
 import { builder } from "@/main";
+import HeaderComp from "../components/HeaderComp.vue";
 
 export default {
-  components: { HeroSectionButtonCompVue },
+  components: { HeroSectionButtonCompVue, HeaderComp },
   data() {
     return {
       heroImages: {

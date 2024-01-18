@@ -1,10 +1,10 @@
 <template>
   <div
-    class="bg-gradient-to-tr from-darling-secondary-purple to-white via-darling-purple-light h-screen lg:min-h-screen lg:bg-gradient-to-tl lg:from-darling-secondary-purple lg:to-white-alt lg:via-darling-purple-light"
+    class="inset-0 -z-30 bg-gradient-to-tr from-darling-secondary-purple to-white via-darling-purple-light lg:min-h-[700px] lg:h-[95vh] lg:bg-gradient-to-br lg:from-white-alt lg:via-darling-purple-light lg:to-darling-secondary-purple"
   >
-    <div class="p-5">
+<!--     <div class="p-5">
       <HeaderComp h="1" text="This is Darling" width="10rem" />
-    </div>
+    </div> -->
     <HeroSectionComp />
   </div>
   <!-- <SpacingComp> -->
