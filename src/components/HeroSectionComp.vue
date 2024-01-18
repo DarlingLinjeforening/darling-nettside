@@ -12,88 +12,65 @@
         <hero-section-button-comp-vue></hero-section-button-comp-vue>
       </div>
     </div>
-<!--     <div
-      class="hidden lg:w-full lg:flex lg:justify-center lg:items-center lg:right-0 flex-col gap-5 p-5 relative lg:h-[60%]"
-    >
-      <img
-        class=" hidden lg:flex lg:absolute lg:top-0 lg:w-80 lg:ml-10 lg:z-10 lg:mt-[150px] lg:border-2 lg:border-darling-purple xl:min-w-[120px] xl:mt-[180px] 2xl:mt-[280px] 2xl:min-w-[250px]"
-         :src="urlFor(heroImages.image1)"
-        alt="image1"
-      />
-      <img
-        class=" hidden lg:flex lg:absolute lg:top-0 z-0 lg:w-80 lg:border-2 lg:border-darling-purple xl:min-w-[120px] 2xl:min-w-[250px]"
-        :src="urlFor(heroImages.image2)"
-        alt="image2"
-      />
-      <img
-        class="hidden lg:flex lg:absolute lg:top-0 lg:ml-[300px] lg:z-10 lg:w-72 lg:mt-[100px] lg:border-2 lg:border-darling-purple xl:min-w-[120px] xl:ml-[450px] xl:mt-[100px] 2xl:min-w-[250px] 2xl:ml-[620px]"
-        :src="urlFor(heroImages.image3)"
-        alt="image3"
-      />
-    </div> -->
-
-    
-  <div class="hidden lg:block lg:w-[70%] lg:justify-center lg:relative lg:p-10">
-      <!-- lg:ml-10 lg:z-10 lg:mt-[150px] lg:border-2 lg:border-darling-purple xl:min-w-[120px] xl:mt-[180px] 2xl:mt-[280px] 2xl:min-w-[250px] -->
-      <img
-        class="lg:absolute lg:aspect-[4/3] lg:w-[50%] lg:border-4 lg:border-darling-purple-light bottom-0 left-0"
-         :src="urlFor(heroImages.image1)"
-        alt="image1"
-      />
-      <!-- lg:border-2 lg:border-darling-purple xl:min-w-[120px] 2xl:min-w-[250px] -->
-      <img
-        class="lg:absolute lg:z-10 lg:aspect-[4/3] lg:w-[50%] lg:border-4 lg:border-darling-purple-light right-[30px] bottom-[-70px]"
-        :src="urlFor(heroImages.image2)"
-        alt="image2"
-      />
-      <!-- lg:ml-[300px] lg:z-10 lg:w-72 lg:mt-[100px] lg:border-2 lg:border-darling-purple xl:min-w-[120px] xl:ml-[450px] xl:mt-[100px] 2xl:min-w-[250px] 2xl:ml-[620px] -->
-      <img
-        class="lg:absolute lg:z-5 lg:aspect-[4/3] lg:w-[50%] lg:border-4 lg:border-darling-purple-light top-[0px] left-[50px]"
-        :src="urlFor(heroImages.image3)"
-        alt="image3"
-      />
-    </div>
+ 
+    <div class="hidden lg:block lg:w-[70%] lg:justify-center lg:relative lg:p-10">
+        <img
+          class="lg:absolute lg:aspect-[4/3] lg:w-[50%] lg:border-4 lg:border-darling-purple-light bottom-0 left-0"
+          :src="urlFor(heroImages.image1)"
+          alt="image1"
+        />
+        <img
+          class="lg:absolute lg:z-10 lg:aspect-[4/3] lg:w-[50%] lg:border-4 lg:border-darling-purple-light right-[30px] bottom-[-70px]"
+          :src="urlFor(heroImages.image2)"
+          alt="image2"
+        />
+        <img
+          class="lg:absolute lg:z-5 lg:aspect-[4/3] lg:w-[50%] lg:border-4 lg:border-darling-purple-light top-[0px] left-[50px]"
+          :src="urlFor(heroImages.image3)"
+          alt="image3"
+        />
+      </div>
 
   </div>
 </template>
 
 <script>
-import HeroSectionButtonCompVue from "./HeroSectionButtonComp.vue";
-import { builder } from "@/main";
-import HeaderComp from "../components/HeaderComp.vue";
+  import HeroSectionButtonCompVue from "./HeroSectionButtonComp.vue";
+  import { builder } from "@/main";
+  import HeaderComp from "../components/HeaderComp.vue";
 
-export default {
-  components: { HeroSectionButtonCompVue, HeaderComp },
-  data() {
-    return {
-      heroImages: {
-        image1: null,
-        image2: null,
-        image3: null,
-      },
-    };
-  },
-  mounted() {
-    this.$sanityClient
-      .fetch('*[_type == "heroImages"][0]{"image1": image1.asset._ref, "image2": image2.asset._ref, "image3": image3.asset._ref}')
-      .then((data) => {
-        console.log(data);
-        if (data) {
-          this.heroImages.image1 = data.image1;
-          this.heroImages.image2 = data.image2;
-          this.heroImages.image3 = data.image3;
-        }
-      });
-  },
-  methods: {
-    urlFor(source) {
-      if (source) {
-        return builder.image(source);
-      }
-      return null; 
+  export default {
+    components: { HeroSectionButtonCompVue, HeaderComp },
+    data() {
+      return {
+        heroImages: {
+          image1: null,
+          image2: null,
+          image3: null,
+        },
+      };
     },
-  },
-};
+    mounted() {
+      this.$sanityClient
+        .fetch('*[_type == "heroImages"][0]{"image1": image1.asset._ref, "image2": image2.asset._ref, "image3": image3.asset._ref}')
+        .then((data) => {
+          console.log(data);
+          if (data) {
+            this.heroImages.image1 = data.image1;
+            this.heroImages.image2 = data.image2;
+            this.heroImages.image3 = data.image3;
+          }
+        });
+    },
+    methods: {
+      urlFor(source) {
+        if (source) {
+          return builder.image(source);
+        }
+        return null; 
+      },
+    },
+  };
 </script>
 
 
