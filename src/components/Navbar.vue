@@ -1,7 +1,7 @@
 <template>
   <nav>
     <div
-      class="flex justify-center relative text-white bg-darling-purple p-4 uppercase font-bold content-center max-h-14"
+      class="flex justify-center lg:items-center relative text-white bg-darling-purple p-4 uppercase font-bold content-center max-h-14"
     >
       <div
         class="flex flex-row w-full max-w-7xl px-8 justify-between h-8 items-center"
@@ -116,16 +116,16 @@
           </ul>
           <!-- Social icons -->
           <div
-            class="pt-32 pl-8 text-white font-bold text-3xl flex flex-col [&>a]:py-2"
+            class="pl-8 text-white font-bold text-3xl flex flex-col [&>a]:py-2"
           >
-            <a :href="this.socials[1]">
-              <i class="pi pi-instagram py-2 text-5xl"></i>
+            <a :href="this.socials[1]" target="_blank">
+              <i class="pi pi-instagram py-1 text-5xl"></i>
             </a>
-            <a :href="this.socials[2]">
-              <i class="pi pi-facebook py-2 text-5xl"></i>
+            <a :href="this.socials[2]" target="_blank">
+              <i class="pi pi-facebook py-1 text-5xl"></i>
             </a>
-            <a :href="this.socials[0]">
-              <i class="pi pi-linkedin py-2 text-5xl"></i>
+            <a :href="this.socials[0]" target="_blank">
+              <i class="pi pi-linkedin py-1 text-5xl"></i>
             </a>
           </div>
         </div>

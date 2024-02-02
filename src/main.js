@@ -16,6 +16,7 @@ import imageUrlBuilder from "@sanity/image-url";
 const client = createClient({
   projectId: '55ga7y25',
   dataset: 'production',
+  apiVersion: '2021-10-21',
   useCdn: true, // Enable Content Delivery Network (CDN) for faster responses
 });
 

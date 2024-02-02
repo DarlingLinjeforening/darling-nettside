@@ -22,7 +22,6 @@ function clean($var, $ent = false){
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     echo '<pre>';
-    //print_r($_POST);
     // Get values from POST
     $recaptcha = $_POST['g-recaptcha-response'];
     $name = clean($_POST['name']);
@@ -31,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $mailTo = "kontakt@darlinglinjeforening.org";
     $subject = clean($_POST['subject'], true);
     $txt = "You have received an email from " . $mailFrom . ".\n\n" . $message;
-    $headers = 'From: Darling Linjeforening nettside (kontakt-siden)' . "\r\n" .
+    $headers = 'From: Darling - Nettside kontakt form' . "\r\n" .
         'Reply-To: ' . $mailFrom . "\r\n" .
         'X-Mailer: PHP/' . PHP_VERSION;
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="py-4">
+  <div class="py-4 mb-[5%]">
     <div class="flex flex-col md:flex-row">
         <img
         :src="imgSrc"

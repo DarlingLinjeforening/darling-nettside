@@ -2,7 +2,7 @@
   <div class="lg:flex lg:flex-row lg:justify-between lg:h-[90vh] lg:min-h-[700px] py-20 px-10 lg:py-0 gap-x-20 items-center">
     <div class="flex justify-center h-full flex-col lg:max-w-[60%]">
       <div class="pl-5 pr-5 pb-3 flex flex-col lg:h-[60%]">
-        <HeaderComp h="1" text="This is Darling" width="18em" />
+        <HeaderComp h="1" text="Darling Linjeforening" width="18em" />
         <p class="xl:text-xl max-w-[60ch] pb-3 pt-2">
           The student organization representing the design courses at NTNU Gjøvik.
           Whether you're a graphic designer, interaction designer, web developer,
