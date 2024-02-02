@@ -27,7 +27,7 @@
           <div class="flex flex-row [&>*]:px-3 md:flex-col">
             <div class="flex flex-col justify-center items-center md:justify-start md:flex-row ">
               <h3
-                class="text-2xl font-bold md:p-2 md:flex md:flex-row-reverse text-center md:text-left"
+                class="text-2xl font-bold md:flex md:flex-row-reverse text-center md:text-left"
               >
                 Filter / Sort
               </h3>
