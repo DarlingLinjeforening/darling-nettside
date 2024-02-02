@@ -149,7 +149,7 @@ export default {
         this.allEvents = data;
         this.allEvents.forEach((event) => {
           // Build an image icon link for the event type icon
-          if (event.icon){
+          if (event.typeIcon.icon.asset._ref){
             event.icon = builder
             .image(event.typeIcon.icon.asset._ref)
             .width(100)
