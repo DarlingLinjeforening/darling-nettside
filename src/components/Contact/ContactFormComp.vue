@@ -34,7 +34,7 @@
         id="g-recaptcha"
       ></div>
       <input
-        class="mt-5 text-white bg-darling-purple hover:bg-darling-purple-light hover:text-darling-purple cursor-pointer font-bold py-2 px-4  md:mt-8"
+        class="mt-5 text-white bg-darling-purple hover:bg-darling-purple-light hover:text-darling-purple border-2 border-darling-purple cursor-pointer font-bold py-2 px-4  md:mt-8"
         type="submit"
         value="Submit"
         name="Submit"
