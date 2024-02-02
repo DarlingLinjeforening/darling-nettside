@@ -2,7 +2,7 @@
   <!-- Filter section -->
   <section
     class="flex flex-col mb-2 rounded shadow-2xl bg-white md:w-60 md:h-fit w-full md:absolute md:left-[64vw]"
-    v-if="events.length > 0"
+    v-if="allEvents.length > 0"
   >
     <div class="p-2">
       <form action="" class="flex flex-col ml-3">
@@ -74,68 +74,12 @@
         <p v-if="events.length < 1">There are no upcoming events.</p>
       </section>
     </div>
-    <!-- Filter section
-    <section
-      class="flex flex-col mb-2 rounded shadow-2xl bg-white md:w-60 md:h-full w-full"
-      v-if="events.length > 0"
-    >
-      <div class="p-2">
-        <form action="" class="flex flex-col ml-3">
-          <div class="flex flex-row [&>*]:px-3 md:flex-col">
-            <div
-              class="flex flex-col justify-center items-center md:justify-start md:flex-row"
-            >
-              <h3
-                class="text-2xl font-bold md:flex md:flex-row-reverse text-center md:text-left"
-              >
-                Filter / Sort
-              </h3>
-              <div class="flex flex-row py-2">
-                <div
-                  tabindex="0"
-                  @click="switchSort"
-                  @keyup.enter="switchSort"
-                  class="flex justify-center items-center text-xl bg-darling-secondary-orange w-8 h-8 md:w-6 md:h-6 md:text-base rounded-md hover:bg-darling-secondary-yellow"
-                >
-                  <i class="pi pi-arrow-down" v-if="sortType === 'asc'"></i>
-                  <i class="pi pi-arrow-up" v-if="sortType === 'desc'"></i>
-                </div>
-              </div>
-            </div>
-            <div class="flex flex-col">
-              <div
-                v-for="eventType in eventTypes"
-                class="flex flex-row items-center py-1"
-              >
-                <input
-                  @change="filterBy"
-                  v-model="options"
-                  type="checkbox"
-                  :value="eventType.title"
-                  :id="eventType.title"
-                  :name="eventType.title"
-                />
-                <label
-                  class="flex flex-row px-1 items-center"
-                  :for="eventType.title"
-                  ><img
-                    :src="urlFor(eventType.icon).url()"
-                    :alt="eventType.title"
-                    class="align-baselien w-4 h-4 mr-1"
-                  />{{ eventType.title }}</label
-                >
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-    </section> -->
   </div>
   <!-- Past events section-->
   <section class="mt-10">
     <h3 class="text-2xl font-bold mb-2">Past events</h3>
     <details>
-      <summary class=" pl-2 mb-2 cursor-pointer"> Show previous events</summary>
+      <summary class="pl-2 mb-2 cursor-pointer">Show previous events</summary>
 
       <EventComp
         v-for="(event, index) in oldEvents"
@@ -208,11 +152,11 @@ export default {
         this.allEvents = data;
         this.allEvents.forEach((event) => {
           // Build an image icon link for the event type icon
-          if (event.typeIcon.icon.asset._ref){
+          if (event.typeIcon.icon.asset._ref) {
             event.icon = builder
-            .image(event.typeIcon.icon.asset._ref)
-            .width(100)
-            .url();
+              .image(event.typeIcon.icon.asset._ref)
+              .width(100)
+              .url();
           }
 
           // Create a new date object from the Sanity datetime string
