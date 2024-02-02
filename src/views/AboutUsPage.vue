@@ -1,10 +1,10 @@
 <template>
   <SpacingComp>
-    <HeaderComp h="1" text="About Us"/>
-    <HeaderComp h="2" text="Our Board Members"/>
+    <HeaderComp h="1" text="About Us" />
+    <!-- <HeaderComp h="2" text="Our Board Members" /> -->
     <HeadshotsComp />
-    <faq-comp />
     <lounge-comp />
+    <faq-comp />
   </SpacingComp>
 </template>
 
