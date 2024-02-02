@@ -1,6 +1,5 @@
 <template>
-  <section class="prose">
-    <HeaderComp text="About" h="2" width="4em" height="1.5em" left="1.5em" bottom="3.2rem"/>
+  <section class="prose mb-20">
     <div v-if="text.length > 0">
       <PortableText :value="text" />
     </div>
