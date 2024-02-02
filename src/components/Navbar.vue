@@ -59,7 +59,7 @@
       <template v-if="menuOpen">
         <div class="bg-darling-purple absolute w-screen h-screen z-10">
           <img
-            class="h-8 -rotate-90"
+            class="h-8 relative top-14 -rotate-90"
             src="/images/Darling-logo-white.png"
             alt="Darling Logo"
           />
