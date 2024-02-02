@@ -149,10 +149,12 @@ export default {
         this.allEvents = data;
         this.allEvents.forEach((event) => {
           // Build an image icon link for the event type icon
-          event.icon = builder
+          if (event.icon){
+            event.icon = builder
             .image(event.typeIcon.icon.asset._ref)
             .width(100)
             .url();
+          }
 
           // Create a new date object from the Sanity datetime string
           let datetime = new Date(event.datetime);
