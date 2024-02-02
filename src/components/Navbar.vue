@@ -1,7 +1,7 @@
 <template>
   <nav>
     <div
-      class="flex justify-center items-center relative text-white bg-darling-purple p-4 uppercase font-bold content-center max-h-14"
+      class="flex justify-center lg:items-center relative text-white bg-darling-purple p-4 uppercase font-bold content-center max-h-14"
     >
       <div
         class="flex flex-row w-full max-w-7xl px-8 justify-between h-8 items-center"
