@@ -13,13 +13,14 @@
       </div>
       <div>
         <div class="flex flex-row justify-center gap-3 -mt-3 mb-10">
-          <a :href="this.socials[1]"
-            ><img src="/images/instagram-icon.svg" alt="Instagram icon"
+          <a :href="this.socials[1]" target="_blank"
+            ><img src="/images/instagram-icon.svg" alt="Instagram icon" 
           /></a>
-          <a :href="this.socials[2]"
+          <a :href="this.socials[2]" target="_blank"
             ><img src="/images/facebook-icon.svg" alt="Facebook icon"
+            
           /></a>
-          <a :href="this.socials[0]"
+          <a :href="this.socials[0]" target="_blank"
             ><img src="/images/linkedin-icon.svg" alt="LinkedIn icon"
           /></a>
         </div>

@@ -118,13 +118,13 @@
           <div
             class="pt-32 pl-8 text-white font-bold text-3xl flex flex-col [&>a]:py-2"
           >
-            <a :href="this.socials[1]">
+            <a :href="this.socials[1]" target="_blank">
               <i class="pi pi-instagram py-2 text-5xl"></i>
             </a>
-            <a :href="this.socials[2]">
+            <a :href="this.socials[2]" target="_blank">
               <i class="pi pi-facebook py-2 text-5xl"></i>
             </a>
-            <a :href="this.socials[0]">
+            <a :href="this.socials[0]" target="_blank">
               <i class="pi pi-linkedin py-2 text-5xl"></i>
             </a>
           </div>
