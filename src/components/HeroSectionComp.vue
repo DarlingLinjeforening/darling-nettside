@@ -37,7 +37,7 @@
 <script>
   import HeroSectionButtonCompVue from "./HeroSectionButtonComp.vue";
   import { builder } from "@/main";
-  import HeaderComp from "../components/HeaderComp.vue";
+  import HeaderComp from "./HeaderComp.vue";
 
   export default {
     components: { HeroSectionButtonCompVue, HeaderComp },
