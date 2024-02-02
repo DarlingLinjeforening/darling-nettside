@@ -11,6 +11,7 @@
       :jobType="job.jobType"
       :imgSrc="urlFor(job.imgSrc).url()"
     />
+    <p v-if="jobs.length < 1">There are no job offers through Darling.</p>
   </div>
 </template>
 
