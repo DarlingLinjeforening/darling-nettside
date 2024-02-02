@@ -20,7 +20,7 @@
     </div>
     <!-- Filter section -->
     <section
-      class="flex flex-col mb-2 rounded shadow-2xl bg-white md:w-60 md:h-full w-full"
+      class="flex flex-col mb-2 shadow-2xl bg-white md:w-60 md:h-full w-full"
     >
       <div class="p-2">
         <form action="" class="flex flex-col ml-3">
