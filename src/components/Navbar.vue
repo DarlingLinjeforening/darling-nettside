@@ -3,7 +3,9 @@
     <div
       class="flex justify-center relative text-white bg-darling-purple p-4 uppercase font-bold content-center max-h-14"
     >
-      <div class="flex flex-row w-full max-w-7xl px-8 justify-between">
+      <div
+        class="flex flex-row w-full max-w-7xl px-8 justify-between h-8 items-center"
+      >
         <div>
           <a href="/">
             <span v-if="!menuOpen">
@@ -16,7 +18,7 @@
         </div>
 
         <div class="flex flex-row">
-          <div @click="openMenu" @keyup.enter="openMenu" class="p-2">
+          <div @click="openMenu" @keyup.enter="openMenu" class="p-2 z-20">
             <i
               tabindex="0"
               :class="
