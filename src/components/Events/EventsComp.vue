@@ -74,9 +74,9 @@
   </div>
   <!-- Past events section-->
   <section class="mt-10">
-    <h3 class="text-2xl font-bold ml-4 mb-2">Past events</h3>
+    <h3 class="text-2xl font-bold mb-2">Past events</h3>
     <details>
-      <summary class="ml-4"></summary>
+      <summary class=" pl-2 mb-2 cursor-pointer"> Show previous events</summary>
 
       <EventComp
         v-for="(event, index) in oldEvents"
