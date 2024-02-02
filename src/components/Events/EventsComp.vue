@@ -86,7 +86,7 @@
               class="flex flex-col justify-center items-center md:justify-start md:flex-row"
             >
               <h3
-                class="text-2xl font-bold md:p-2 md:flex md:flex-row-reverse text-center md:text-left"
+                class="text-2xl font-bold md:flex md:flex-row-reverse text-center md:text-left"
               >
                 Filter / Sort
               </h3>
@@ -133,9 +133,9 @@
   </div>
   <!-- Past events section-->
   <section class="mt-10">
-    <h3 class="text-2xl font-bold ml-4 mb-2">Past events</h3>
+    <h3 class="text-2xl font-bold mb-2">Past events</h3>
     <details>
-      <summary class="ml-4"></summary>
+      <summary class=" pl-2 mb-2 cursor-pointer"> Show previous events</summary>
 
       <EventComp
         v-for="(event, index) in oldEvents"
@@ -208,10 +208,12 @@ export default {
         this.allEvents = data;
         this.allEvents.forEach((event) => {
           // Build an image icon link for the event type icon
-          event.icon = builder
+          if (event.typeIcon.icon.asset._ref){
+            event.icon = builder
             .image(event.typeIcon.icon.asset._ref)
             .width(100)
             .url();
+          }
 
           // Create a new date object from the Sanity datetime string
           let datetime = new Date(event.datetime);
