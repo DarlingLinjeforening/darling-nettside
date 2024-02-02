@@ -1,5 +1,6 @@
 <template>
   <div class="mt-12 md:mt-5">
+    <p class="font-bold">NOTICE: The contact form is disabled for the time being. Please contact us by email via the sidebar to the right.</p>
     <form
       class="flex content-center p-2 flex-col sm:max-w-[50vw] w-[80vw] md:w-72 lg:w-96 lg:text-xl"
       @submit.prevent="submitForm"
@@ -7,38 +8,46 @@
       <label for="name">Name:</label>
       <input
         required
+        disabled
         class="shadow appearance-none border py-2 px-3 md:mt-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         v-model="name"
       />
       <label class="mt-5 md:mt-8" for="email">Email:</label>
       <input
         required
+        disabled
         class="shadow appearance-none border  py-2 px-3 md:mt-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         v-model="email"
       />
       <label class="mt-5 md:mt-8" for="subject">Subject:</label>
       <input
         required
+        disabled
         class="shadow appearance-none border  py-2 px-3 md:mt-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         v-model="subject"
       />
       <label class="mt-5 md:mt-8" for="message">Message:</label>
       <textarea
         required
+        disabled
         class="shadow appearance-none border  py-2 px-3 md:mt-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline max-h-32 md:max-h-44 lg:h-44"
         v-model="message"
       >
       </textarea>
+      <!-- Contact form is disabled for now!-->
+      <!--
       <div
         class="g-recaptcha mt-5 md:mt-8 recaptcha-resize"
         id="g-recaptcha"
       ></div>
-      <input
+      
+       <input
         class="mt-5 text-white bg-darling-purple hover:bg-darling-purple-light hover:text-darling-purple border-2 border-darling-purple cursor-pointer font-bold py-2 px-4  md:mt-8"
         type="submit"
         value="Submit"
         name="Submit"
-      />
+        disabled
+      /> -->
     </form>
   </div>
 </template>
