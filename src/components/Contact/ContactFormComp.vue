@@ -86,7 +86,7 @@ export default {
       grecaptcha.reset();
 
       axios
-        .post("http://e1.darlinglinjeforening.org/contact.php", formData)
+        .post("https://folk.ntnu.no/darling/contact.php", formData)
         .then((response) => {
           if (response.data.includes("Error")) {
             this.$toast.open({
