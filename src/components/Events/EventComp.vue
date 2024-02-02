@@ -4,8 +4,8 @@
       <div
         :class="
           altbackground
-            ? 'bg-white h-28 flex flex-row justify-between px-10'
-            : 'bg-white-alt h-28 flex flex-row justify-between px-10'
+            ? 'bg-white h-28 flex flex-row justify-between'
+            : 'bg-white-alt h-28 flex flex-row justify-between '
         "
       >
         <!-- Information (left side)-->
