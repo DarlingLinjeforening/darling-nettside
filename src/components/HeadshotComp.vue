@@ -9,7 +9,7 @@
       <p class="pt-2 font-bold text-xl">{{ name }}</p>
       <p class="font-bold text-base">{{ role }}</p>
       <p v-if="phone">Tel: {{ phone }}</p>
-      <p class="text-sm" v-if="mail">Email: {{ mail }}</p>
+      <a :href="'mailto:' + mail" class="text-sm" v-if="mail">Email: {{ mail }}</a>
     </div>
   </div>
 </template>
