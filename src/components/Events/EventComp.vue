@@ -4,8 +4,8 @@
     <div
       :class="
         altbackground
-          ? 'bg-white p-2 h-fit sm:h-28 flex flex-row justify-between px-10'
-          : 'bg-white-alt p-2 h-fit sm:h-28 flex flex-row justify-between px-10'
+          ? 'bg-white h-fit sm:h-28 flex mb-5 flex-row justify-between'
+          : 'bg-white-alt h-fit sm:h-28 mb-5 flex flex-row justify-between'
       "
     >
       <!-- Information (left side)-->
@@ -13,7 +13,7 @@
         <!-- Lemon Icon -->
         <div><EventLemon :date="props.dateformat" /></div>
         <!-- Right Info -->
-        <div class="flex flex-col mx-10">
+        <div class="flex flex-col mx-1">
           <div>
             <h3 class="text-lg">{{ props.title }}</h3>
           </div>
