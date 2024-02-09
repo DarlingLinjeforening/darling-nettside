@@ -11,6 +11,11 @@ export const i18n = {
     pastEvents: "Past events",
     showPreviousEvents: "Show previous events",
     noPastEvents: "There are no past events.",
+    exploreEvents: "Explore Events",
+  },
+  hero: {
+    aboutText:
+      "The student organization representing the design courses at NTNU Gjøvik. Whether you're a graphic designer, interaction designer, web developer, or simply just passionate about design, Darling is your gateway to success.",
   },
   jobs: {
     noDeadline: "As soon as possible",
@@ -22,5 +27,12 @@ export const i18n = {
   socialMedia: {
     callout: "Follow us on Instagram, Facebook, and LinkedIn!",
     copyright: "© 2024 darling Linjeforening",
+  },
+  navigation: {
+    home: "Home",
+    events: "Events",
+    aboutUs: "About us",
+    jobs: "Job offers",
+    contact: "Contact",
   },
 };
