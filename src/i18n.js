@@ -5,4 +5,11 @@ export const i18n = {
     subjectLabel: "Subject:",
     messageLabel: "Message:",
   },
+  eventComp: {
+    noUpcoming: "There are no upcoming events.",
+    filterSort: "Filter / Sort",
+    pastEvents: "Past events",
+    showPreviousEvents: "Show previous events",
+    noPastEvents: "There are no past events.",
+  },
 };

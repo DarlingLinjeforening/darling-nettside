@@ -15,7 +15,7 @@
           :dateformat="event.dateformat"
           :altbackground="isOdd(index) ? true : false"
         />
-        <p v-if="events.length < 1">There are no upcoming events.</p>
+        <p v-if="events.length < 1">{{ i18n.eventComp.noUpcoming }}</p>
       </section>
     </div>
     <!-- Filter section -->
@@ -25,11 +25,13 @@
       <div class="p-2">
         <form action="" class="flex flex-col ml-3">
           <div class="flex flex-row [&>*]:px-3 md:flex-col">
-            <div class="flex flex-col justify-center items-center md:justify-start md:flex-row ">
+            <div
+              class="flex flex-col justify-center items-center md:justify-start md:flex-row"
+            >
               <h3
                 class="text-2xl font-bold md:flex md:flex-row-reverse text-center md:text-left"
               >
-                Filter / Sort
+                {{ i18n.eventComp.filterSort }}
               </h3>
               <div class="flex flex-row py-2">
                 <div
@@ -74,9 +76,11 @@
   </div>
   <!-- Past events section-->
   <section class="mt-10">
-    <h3 class="text-2xl font-bold mb-2">Past events</h3>
+    <h3 class="text-2xl font-bold mb-2">{{ i18n.eventComp.pastEvents }}</h3>
     <details>
-      <summary class=" pl-2 mb-2 cursor-pointer"> Show previous events</summary>
+      <summary class="pl-2 mb-2 cursor-pointer">
+        {{ i18n.eventComp.showPreviousEvents }}
+      </summary>
 
       <EventComp
         v-for="(event, index) in oldEvents"
@@ -90,7 +94,7 @@
         :dateformat="event.dateformat"
         :altbackground="isOdd(index) ? true : false"
       />
-      <p v-if="oldEvents.length < 1">There are no past events.</p>
+      <p v-if="oldEvents.length < 1">{{ i18n.eventComp.noPastEvents }}</p>
     </details>
   </section>
 </template>
@@ -98,6 +102,7 @@
 <script>
 import { builder } from "@/main";
 import EventComp from "./EventComp.vue";
+import { i18n } from "../../i18n";
 
 const monthNames = [
   "January",
@@ -131,6 +136,7 @@ export default {
   },
   data() {
     return {
+      i18n,
       allEvents: [],
       events: [],
       eventTypes: [],
@@ -149,11 +155,11 @@ export default {
         this.allEvents = data;
         this.allEvents.forEach((event) => {
           // Build an image icon link for the event type icon
-          if (event.typeIcon.icon.asset._ref){
+          if (event.typeIcon.icon.asset._ref) {
             event.icon = builder
-            .image(event.typeIcon.icon.asset._ref)
-            .width(100)
-            .url();
+              .image(event.typeIcon.icon.asset._ref)
+              .width(100)
+              .url();
           }
 
           // Create a new date object from the Sanity datetime string
