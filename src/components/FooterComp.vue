@@ -5,10 +5,9 @@
       <div class="text-white">
         <h3 class="text-center mb-5 font-bold text-lg uppercase">Address</h3>
         <p class="text-center hover:underline">
-          <a
-            :href="'http://maps.google.com/maps?q=' + contact.address"
-            >{{contact.address}}</a
-          >
+          <a :href="'http://maps.google.com/maps?q=' + contact.address">{{
+            contact.address
+          }}</a>
         </p>
       </div>
       <div>
@@ -24,7 +23,7 @@
           /></a>
         </div>
         <p class="text-white -mt-5 text-center">
-          Follow us on Instagram, Facebook og LinkedIn!
+          {{ i18n.socialMedia.callout }}
         </p>
       </div>
       <div>
@@ -32,9 +31,7 @@
           Contact
         </h3>
         <p class="text-white text-center hover:underline">
-          <a :href="'mailto:' + contact.email"
-            >{{contact.email}}</a
-          >
+          <a :href="'mailto:' + contact.email">{{ contact.email }}</a>
         </p>
       </div>
       <div class="hidden md:block"></div>
@@ -54,16 +51,19 @@
         </div>
       </div>
       <p class="flex justify-center -mt-11 p-6 text-bg-darling-purple">
-        © 2024 DARLING Linjeforening
+        {{ i18n.socialMedia.copyright }}
       </p>
     </div>
   </footer>
 </template>
 
 <script>
+import { i18n } from "../i18n";
+
 export default {
   data() {
     return {
+      i18n,
       contact: [],
       socials: [],
     };

@@ -18,4 +18,9 @@ export const i18n = {
     partTime: "Part time",
     summer: "Summer",
   },
+  readMore: "Read More",
+  socialMedia: {
+    callout: "Follow us on Instagram, Facebook, and LinkedIn!",
+    copyright: "© 2024 darling Linjeforening",
+  },
 };
