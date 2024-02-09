@@ -4,28 +4,34 @@
       class="flex content-center p-2 flex-col sm:max-w-[50vw] w-[80vw] md:w-72 lg:w-96 lg:text-xl"
       @submit.prevent="submitForm"
     >
-      <label for="name">Name:</label>
+      <label for="name">{{ i18n.contactForm.nameLabel }}</label>
       <input
         required
         class="shadow appearance-none border py-2 px-3 md:mt-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         v-model="name"
       />
-      <label class="mt-5 md:mt-8" for="email">Email:</label>
+      <label class="mt-5 md:mt-8" for="email">{{
+        i18n.contactForm.emailLabel
+      }}</label>
       <input
         required
-        class="shadow appearance-none border  py-2 px-3 md:mt-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        class="shadow appearance-none border py-2 px-3 md:mt-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         v-model="email"
       />
-      <label class="mt-5 md:mt-8" for="subject">Subject:</label>
+      <label class="mt-5 md:mt-8" for="subject">{{
+        i18n.contactForm.subjectLabel
+      }}</label>
       <input
         required
-        class="shadow appearance-none border  py-2 px-3 md:mt-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        class="shadow appearance-none border py-2 px-3 md:mt-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         v-model="subject"
       />
-      <label class="mt-5 md:mt-8" for="message">Message:</label>
+      <label class="mt-5 md:mt-8" for="message">{{
+        i18n.contactForm.messageLabel
+      }}</label>
       <textarea
         required
-        class="shadow appearance-none border  py-2 px-3 md:mt-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline max-h-32 md:max-h-44 lg:h-44"
+        class="shadow appearance-none border py-2 px-3 md:mt-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline max-h-32 md:max-h-44 lg:h-44"
         v-model="message"
       >
       </textarea>
@@ -34,7 +40,7 @@
         id="g-recaptcha"
       ></div>
       <input
-        class="mt-5 text-white bg-darling-purple hover:bg-darling-purple-light hover:text-darling-purple cursor-pointer font-bold py-2 px-4  md:mt-8"
+        class="mt-5 text-white bg-darling-purple hover:bg-darling-purple-light hover:text-darling-purple cursor-pointer font-bold py-2 px-4 md:mt-8"
         type="submit"
         value="Submit"
         name="Submit"
@@ -45,10 +51,12 @@
 
 <script>
 import axios from "axios";
+import { i18n } from "../../i18n";
 
 export default {
   data() {
     return {
+      i18n,
       name: "",
       email: "",
       subject: "",
@@ -90,13 +98,13 @@ export default {
         .then((response) => {
           if (response.data.includes("Error")) {
             this.$toast.open({
-            message: response.data,
-            type: "error",
-            pauseOnHover: true,
-            duration: 3000,
-            position: "top-right",
-          });
-          console.error(response.data);
+              message: response.data,
+              type: "error",
+              pauseOnHover: true,
+              duration: 3000,
+              position: "top-right",
+            });
+            console.error(response.data);
           } else {
             this.$toast.open({
               message: response.data,
