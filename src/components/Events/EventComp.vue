@@ -20,18 +20,18 @@
           <div class="flex flex-row items-center py-2">
             <img
               :src="props.icon"
-              :alt="props.type"
+              :alt="'Event type'"
               class="align-baselien w-4 h-4 mr-1"
             />
             {{ props.type }}
           </div>
           <div class="flex flex-row">
             <div clas="align-baseline">
-              <i class="pi pi-clock align-baseline"></i> {{ props.time }}
+              <i class="pi pi-clock align-baseline" title="Time"></i> {{ props.time }}
             </div>
             <div class="px-3">|</div>
             <div>
-              <i class="pi pi-map-marker align-baseline"></i>
+              <i class="pi pi-map-marker align-baseline" title="Location"></i>
               {{ props.location }}
             </div>
           </div>
