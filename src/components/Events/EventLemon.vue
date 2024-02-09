@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-center items-center text-center cursor-default" style="background-color: #904FC3; -webkit-mask-image: url('/svg/lemon.svg'); mask-image: url('/svg/lemon.svg'); width:86px; height:84px;">
+  <div class="flex flex-col justify-center items-center text-center cursor-default scale-[0.7] md:scale-[1]" style="background-color: #904FC3; -webkit-mask-image: url('/svg/lemon.svg'); mask-image: url('/svg/lemon.svg'); width:86px; height:84px;">
     <p class="text-white text-3xl p-0 m-0">{{ dateTop }}</p>
     <p class="text-white lowercase p-0 m-0">{{ dateBottom }}</p>
   </div>
