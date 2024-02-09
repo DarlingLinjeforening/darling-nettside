@@ -12,4 +12,10 @@ export const i18n = {
     showPreviousEvents: "Show previous events",
     noPastEvents: "There are no past events.",
   },
+  jobs: {
+    noDeadline: "As soon as possible",
+    fullTime: "Full time",
+    partTime: "Part time",
+    summer: "Summer",
+  },
 };
