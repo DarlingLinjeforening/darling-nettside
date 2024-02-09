@@ -15,7 +15,7 @@
           class="md:bg-darling-purple-light md:w-25 md:min-h-full md:right-0 md:absolute -z-10"
         ></aside>
       <div
-        class="flex items-center flex-col my-5 w-full md:flex-row-reverse lg:justify-between lg:items-start md:min-h-fit md:gap-[5vw] lg:gap-[10vw] md:z-10 md:relative xl:gap-[25vw]"
+        class="flex items-center flex-col my-5 w-full md:flex-row-reverse lg:justify-between lg:items-start md:min-h-fit md:gap-[5vw] lg:gap-[10vw]  md:relative xl:gap-[25vw]"
       >
         <ContactInfoComp />
 
