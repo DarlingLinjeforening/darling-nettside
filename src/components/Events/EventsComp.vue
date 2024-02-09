@@ -2,7 +2,7 @@
   <!-- Events section -->
   <div class="flex flex-col-reverse md:flex-row">
     <div class="flex-col">
-      <section class="mb-2 min-w-[50vw]">
+      <section class="mb-2 min-w-[70vw] 2xl:min-w-[50vw]">
         <EventComp
           v-for="(event, index) in events"
           :key="event"

@@ -1,10 +1,10 @@
 <template>
-  <SpacingComp>
-    <!-- <section class="md:max-w-[75%] md:my-0 md:mx-auto"> -->
-    <HeaderComp text="Job Offers" h="1" width="10em" />
-    <JobsComp />
-    <!-- </section> -->
-  </SpacingComp>
+  <div class="min-h-screen">
+    <SpacingComp>
+      <HeaderComp text="Job Offers" h="1" width="10em" />
+      <JobsComp />
+    </SpacingComp>
+  </div>
 </template>
 
 <script>

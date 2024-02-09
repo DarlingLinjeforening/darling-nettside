@@ -5,7 +5,7 @@
     <!-- Her vil vi legge inn headshotComp og props -->
     <div class="flex justify-center items-center">
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-12 my-12"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-12 mb-12"
       >
         <HeadshotComp
           v-for="headshot in headshots"
