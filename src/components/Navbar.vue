@@ -57,7 +57,8 @@
 
       <!-- Hamburger Menu -->
       <template v-if="menuOpen">
-        <div class="bg-darling-purple absolute w-screen h-screen z-10">
+        <!-- <div class="flex"> -->
+        <div class="fixed inset-y-0 left-0 w-full max-w-xs bg-darling-purple z-10 overflow-y-auto">
           <img
             class="h-8 relative top-14 -rotate-90"
             src="/images/Darling-logo-white.png"
@@ -129,6 +130,7 @@
             </a>
           </div>
         </div>
+        <!-- </div> -->
       </template>
     </div>
   </nav>
