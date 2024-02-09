@@ -31,25 +31,33 @@
 
           <ul class="lg:flex flex-row gap-12 lg:gap-16 mx-0 sm:mx-10 hidden">
             <li>
-              <RouterLink class="navlink" to="/">Home</RouterLink>
+              <RouterLink class="navlink" to="/">{{
+                i18n.navigation.home
+              }}</RouterLink>
             </li>
 
             <li>
-              <RouterLink class="navlink" to="/events">Events</RouterLink>
+              <RouterLink class="navlink" to="/events">{{
+                i18n.navigation.events
+              }}</RouterLink>
             </li>
 
             <li>
-              <RouterLink class="navlink" to="/about">About us</RouterLink>
+              <RouterLink class="navlink" to="/about">{{
+                i18n.navigation.aboutUs
+              }}</RouterLink>
             </li>
 
             <li>
-              <RouterLink class="navlink" to="/job-offers"
-                >Job offers</RouterLink
-              >
+              <RouterLink class="navlink" to="/job-offers">{{
+                i18n.navigation.jobs
+              }}</RouterLink>
             </li>
 
             <li>
-              <RouterLink class="navlink" to="/contact">Contact</RouterLink>
+              <RouterLink class="navlink" to="/contact">{{
+                i18n.navigation.contact
+              }}</RouterLink>
             </li>
           </ul>
         </div>
@@ -74,7 +82,7 @@
                 @keyup.enter="menuOpen = false"
                 @click="menuOpen = false"
                 to="/"
-                >Home</RouterLink
+                >{{ i18n.navigation.home }}</RouterLink
               >
             </li>
 
@@ -83,7 +91,7 @@
                 @keyup.enter="menuOpen = false"
                 @click="menuOpen = false"
                 to="/events"
-                >Events</RouterLink
+                >{{ i18n.navigation.events }}</RouterLink
               >
             </li>
 
@@ -92,7 +100,7 @@
                 @keyup.enter="menuOpen = false"
                 @click="menuOpen = false"
                 to="/about"
-                >About us</RouterLink
+                >{{ i18n.navigation.aboutUs }}</RouterLink
               >
             </li>
 
@@ -101,7 +109,7 @@
                 @keyup.enter="menuOpen = false"
                 @click="menuOpen = false"
                 to="/job-offers"
-                >Job offers</RouterLink
+                >{{ i18n.navigation.jobs }}</RouterLink
               >
             </li>
 
@@ -110,7 +118,7 @@
                 @keyup.enter="menuOpen = false"
                 @click="menuOpen = false"
                 to="/contact"
-                >Contact</RouterLink
+                >{{ i18n.navigation.contact }}</RouterLink
               >
             </li>
           </ul>
@@ -138,10 +146,12 @@
 
 <script>
 const tailwindScreenWidth = 1024;
+import { i18n } from "../i18n";
 
 export default {
   data() {
     return {
+      i18n,
       menuOpen: false,
       socials: [],
     };

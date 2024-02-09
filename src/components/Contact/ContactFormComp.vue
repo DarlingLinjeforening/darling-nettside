@@ -5,28 +5,34 @@
       class="flex content-center p-2 flex-col sm:max-w-[50vw] w-[80vw] md:w-72 lg:w-96 lg:text-xl"
       @submit.prevent="submitForm"
     >
-      <label for="name">Name:</label>
+      <label for="name">{{ i18n.contactForm.nameLabel }}</label>
       <input
         required
         disabled
         class="shadow appearance-none border py-2 px-3 md:mt-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         v-model="name"
       />
-      <label class="mt-5 md:mt-8" for="email">Email:</label>
+      <label class="mt-5 md:mt-8" for="email">{{
+        i18n.contactForm.emailLabel
+      }}</label>
       <input
         required
         disabled
         class="shadow appearance-none border  py-2 px-3 md:mt-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         v-model="email"
       />
-      <label class="mt-5 md:mt-8" for="subject">Subject:</label>
+      <label class="mt-5 md:mt-8" for="subject">{{
+        i18n.contactForm.subjectLabel
+      }}</label>
       <input
         required
         disabled
         class="shadow appearance-none border  py-2 px-3 md:mt-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         v-model="subject"
       />
-      <label class="mt-5 md:mt-8" for="message">Message:</label>
+      <label class="mt-5 md:mt-8" for="message">{{
+        i18n.contactForm.messageLabel
+      }}</label>
       <textarea
         required
         disabled
@@ -54,10 +60,12 @@
 
 <script>
 import axios from "axios";
+import { i18n } from "../../i18n";
 
 export default {
   data() {
     return {
+      i18n,
       name: "",
       email: "",
       subject: "",
@@ -99,13 +107,13 @@ export default {
         .then((response) => {
           if (response.data.includes("Error")) {
             this.$toast.open({
-            message: response.data,
-            type: "error",
-            pauseOnHover: true,
-            duration: 3000,
-            position: "top-right",
-          });
-          console.error(response.data);
+              message: response.data,
+              type: "error",
+              pauseOnHover: true,
+              duration: 3000,
+              position: "top-right",
+            });
+            console.error(response.data);
           } else {
             this.$toast.open({
               message: response.data,

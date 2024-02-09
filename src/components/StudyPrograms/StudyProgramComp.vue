@@ -11,14 +11,21 @@
     <a
       target="_blank"
       :href="studyProgramLink"
-      class="text-white bg-darling-purple hover:bg-darling-purple-light hover:text-darling-purple border-2 border-darling-purple cursor-pointer font-bold py-2 px-4 mt-5 md:mt-8 w-fit text-center"
+      class="bg-darling-purple hover:bg-darling-purple-light text-white font-bold py-2 px-4 border w-32 text-center"
     >
-      Read More
+      {{ i18n.readMore }}
     </a>
   </div>
 </template>
 <script>
+import { i18n } from "../../i18n";
+
 export default {
+  data() {
+    return {
+      i18n,
+    };
+  },
   props: {
     studyProgram: String,
     description: String,

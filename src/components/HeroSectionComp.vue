@@ -6,10 +6,7 @@
       <div class="pl-5 pr-5 pb-3 flex flex-col lg:h-[60%]">
         <HeaderComp h="1" text="Darling Linjeforening" width="18em" />
         <p class="xl:text-xl max-w-[60ch] pb-3 pt-2">
-          The student organization representing the design courses at NTNU
-          Gjøvik. Whether you're a graphic designer, interaction designer, web
-          developer, or simply just passionate about design, Darling is your
-          gateway to success.
+          {{ i18n.hero.aboutText }}
         </p>
         <hero-section-button-comp-vue></hero-section-button-comp-vue>
       </div>
@@ -40,12 +37,14 @@
 <script>
 import HeroSectionButtonCompVue from "./HeroSectionButtonComp.vue";
 import { builder } from "@/main";
-import HeaderComp from "./HeaderComp.vue";
+import HeaderComp from "../components/HeaderComp.vue";
+import { i18n } from "../i18n";
 
 export default {
   components: { HeroSectionButtonCompVue, HeaderComp },
   data() {
     return {
+      i18n,
       heroImages: {
         image1: null,
         image2: null,
