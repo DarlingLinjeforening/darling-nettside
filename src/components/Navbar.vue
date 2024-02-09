@@ -59,7 +59,7 @@
       <template v-if="menuOpen">
         <!-- <div class="flex"> -->
         <div
-          class="fixed inset-y-0 left-0 w-full max-w-xs bg-darling-purple z-10 overflow-y-auto"
+          class="fixed inset-y-0 left-0 min-w-[100%] max-w-xs bg-darling-purple z-10 overflow-y-auto"
         >
           <img
             class="h-8 relative top-14 -rotate-90"
