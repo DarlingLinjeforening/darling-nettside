@@ -33,9 +33,10 @@
               >
                 {{ i18n.eventComp.filterSort }}
               </h3>
-              <div class="flex flex-row py-2">
+              <div class="flex flex-row p-2">
                 <div
                   tabindex="0"
+                  title="Sort events by ascending or descending"
                   @click="switchSort"
                   @keyup.enter="switchSort"
                   class="flex justify-center items-center text-xl bg-darling-secondary-orange w-8 h-8 md:w-6 md:h-6 md:text-base rounded-md hover:bg-darling-secondary-yellow"
@@ -63,7 +64,7 @@
                   :for="eventType.title"
                   ><img
                     :src="urlFor(eventType.icon).url()"
-                    :alt="eventType.title"
+                    :alt="''"
                     class="align-baselien w-4 h-4 mr-1"
                   />{{ eventType.title }}</label
                 >
