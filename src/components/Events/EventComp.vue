@@ -1,11 +1,11 @@
 <template>
   <!-- Event section-->
-  <section>
+  <section class="md:max-w-[65vw]">
     <div
       :class="
         altbackground
-          ? 'bg-white h-fit sm:h-28 flex mb-5 flex-row justify-between'
-          : 'bg-white-alt h-fit sm:h-28 mb-5 flex flex-row justify-between'
+          ? 'bg-white h-fit sm:h-28 flex mb-5 md:pl-4 py-2 flex-row justify-between'
+          : 'bg-white-alt h-fit sm:h-28 mb-5 md:pl-4 flex py-2 flex-row justify-between'
       "
     >
       <!-- Information (left side)-->
@@ -27,7 +27,8 @@
           </div>
           <div class="flex flex-row">
             <div clas="align-baseline">
-              <i class="pi pi-clock align-baseline" title="Time"></i> {{ props.time }}
+              <i class="pi pi-clock align-baseline" title="Time"></i>
+              {{ props.time }}
             </div>
             <div class="px-3">|</div>
             <div>
