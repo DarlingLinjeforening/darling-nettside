@@ -27,7 +27,7 @@
                             tabindex="0"
                             :class="
                                 menuOpen
-                                    ? 'pi pi-times lg:hidden text-3xl'
+                                    ? 'pi pi-times lg:hidden text-3xl fixed'
                                     : 'pi pi-bars lg:hidden text-3xl'
                             "
                         ></i>
@@ -73,7 +73,7 @@
             <template v-if="menuOpen">
                 <!-- <div class="flex"> -->
                 <div
-                    class="fixed inset-y-0 left-0 min-w-[100%] max-w-xs bg-darling-purple z-10 overflow-y-auto"
+                    class="fixed inset-y-0 left-0 min-w-[100%] max-w-xs bg-darling-purple z-10 overflow-hidden"
                 >
                     <img
                         class="h-8 relative top-14 -rotate-90"
