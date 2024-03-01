@@ -1,6 +1,6 @@
 <template>
   <div class="mt-12 md:mt-5">
-    <p class="font-bold">NOTICE: The contact form is disabled for the time being. Please contact us by email via the sidebar to the right.</p>
+    <p class="font-bold">NOTICE: The contact form is disabled for the time being. Please contact us by email <a href="mailto:kontakt@darlinglinjeforening.org" class="underline">kontakt@darlinglinjeforening.org</a></p>
     <form
       class="flex content-center p-2 flex-col sm:max-w-[50vw] w-[80vw] md:w-72 lg:w-96 lg:text-xl"
       @submit.prevent="submitForm"
