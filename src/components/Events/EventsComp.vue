@@ -2,7 +2,7 @@
   <!-- Events section -->
   <div class="flex flex-col-reverse md:flex-row">
     <div class="flex-col">
-      <section class="mb-2 min-w-[70vw] 2xl:min-w-[50vw]">
+      <section class="mb-2 min-w-[60vw] 2xl:min-w-[50vw]">
         <EventComp
           v-for="(event, index) in events"
           :key="event"
@@ -20,7 +20,7 @@
     </div>
     <!-- Filter section -->
     <section
-      class="flex flex-col mb-2 shadow-2xl bg-white md:w-60 md:h-full w-full"
+      class="flex flex-col mb-2 shadow-2xl bg-white md:w-60 md:h-fit w-fit"
     >
       <div class="p-2">
         <form action="" class="flex flex-col ml-3">
@@ -76,7 +76,7 @@
     </section>
   </div>
   <!-- Past events section-->
-  <section class="mt-10">
+  <section class="mt-10 max-w-[80%]">
     <h3 class="text-2xl font-bold mb-2">{{ i18n.eventComp.pastEvents }}</h3>
     <details>
       <summary class="pl-2 mb-2 cursor-pointer">
