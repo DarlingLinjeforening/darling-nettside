@@ -9,7 +9,7 @@
       "
     >
       <!-- Information (left side)-->
-      <div class="flex flex-row items-center gap-3 md:gap-5">
+      <div class="flex flex-row items-center gap-3 md:gap-5 md:pl-4">
         <!-- Lemon Icon -->
         <div><EventLemon :date="props.dateformat" /></div>
         <!-- Right Info -->

@@ -1,7 +1,7 @@
 <template>
   <!-- Filter section -->
   <section
-    class="flex flex-col mb-2 rounded shadow-2xl bg-white md:w-60 md:h-fit w-full md:absolute md:left-[64vw]"
+    class="flex flex-col mb-2 rounded shadow-2xl bg-white md:w-60 md:h-fit w-full md:absolute md:left-[66vw]"
     v-if="allEvents.length > 0"
   >
     <div class="p-2">
