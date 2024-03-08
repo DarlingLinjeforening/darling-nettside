@@ -39,6 +39,8 @@
                   title="Sort events by ascending or descending"
                   @click="switchSort"
                   @keyup.enter="switchSort"
+                  @keydown.space.prevent
+                  @keyup.space="switchSort"
                   class="flex justify-center items-center text-xl bg-darling-secondary-orange w-8 h-8 md:w-6 md:h-6 md:text-base rounded-md hover:bg-darling-secondary-yellow"
                 >
                   <i class="pi pi-arrow-down" v-if="sortType === 'asc'"></i>
