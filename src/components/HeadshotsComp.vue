@@ -11,6 +11,7 @@
           v-for="headshot in headshots"
           :key="headshot._id"
           :image="imgURL(headshot.imgSrc)"
+          :alttext="headshot.image_alttext"
           :name="headshot.name"
           :role="headshot.role"
           :phone="headshot.phoneNumber"
@@ -48,10 +49,9 @@ export default {
   mounted() {
     this.$sanityClient
       .fetch(
-        '*[_type == "members"]{name, role, phoneNumber, email, "imgSrc":image.asset._ref}| order(rank asc)'
+        '*[_type == "members"]{name, role, phoneNumber, email, image_alttext, "imgSrc":image.asset._ref}| order(rank asc)'
       )
       .then((data) => {
-        console.log(data);
         this.headshots = data;
       });
   },

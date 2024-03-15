@@ -2,7 +2,7 @@
   <div>
     <img
       :src="image"
-      alt="Profile Image"
+      :alt="alttext"
       class="object-cover w-52 h-52 border-2 border-darling-purple"
     />
     <div>
@@ -21,6 +21,7 @@
 export default {
   props: {
     image: String,
+    alttext: String,
     name: String,
     role: String,
     phone: Number,
