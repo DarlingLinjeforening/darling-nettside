@@ -1,9 +1,7 @@
 <template>
   <SpacingComp>
-    <div class="py-20">
       <HeaderComp text="Upcoming Events" h="1" width="18em" />
       <EventsComp />
-    </div>
   </SpacingComp>
 </template>
 
