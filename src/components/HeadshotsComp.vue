@@ -10,7 +10,7 @@
         <HeadshotComp
           v-for="headshot in headshots"
           :key="headshot._id"
-          :image="urlFor(headshot.imgSrc).url()"
+          :image="imgURL(headshot.imgSrc)"
           :name="headshot.name"
           :role="headshot.role"
           :phone="headshot.phoneNumber"
@@ -56,8 +56,12 @@ export default {
       });
   },
   methods: {
-    urlFor(source) {
-      return builder.image(source);
+    imgURL(source) {
+      if (source) {
+        return builder.image(source).url();
+      }
+
+      return "";
     },
   },
 };
