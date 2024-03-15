@@ -27,7 +27,7 @@
               tabindex="0"
               :class="
                 menuOpen
-                  ? 'pi pi-times lg:hidden text-3xl fixed'
+                  ? 'pi pi-times lg:hidden text-3xl'
                   : 'pi pi-bars lg:hidden text-3xl'
               "
             ></i>
