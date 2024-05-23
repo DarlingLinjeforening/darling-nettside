@@ -24,19 +24,19 @@ props.left ? (left = props.left) : (left = "2.8rem");
 function returnHeading() {
   switch (props.h) {
     case "1":
-      return "<h1 class='font-bold text-6xl max-w-sm'>" + props.text + "</h1>";
+      return "<h1 class='font-bold text-4xl max-w-sm'>" + props.text + "</h1>";
 
     case "2":
-      return "<h2 class='font-bold text-4xl max-w-sm'>" + props.text + "</h2>";
-
-    case "3":
       return "<h2 class='font-bold text-3xl max-w-sm'>" + props.text + "</h2>";
 
+    case "3":
+      return "<h2 class='font-bold text-2xl max-w-sm'>" + props.text + "</h2>";
+
     case "4":
-      return "<h2 class='font-bold text-1xl max-w-sm'>" + props.text + "</h2>";
+      return "<h2 class='font-bold text-xl max-w-sm'>" + props.text + "</h2>";
 
     default:
-      return "<h2 class='font-bold text-4xl max-w-sm'>" + props.text + "</h2>";
+      return "<h2 class='font-bold text-3xl max-w-sm'>" + props.text + "</h2>";
   }
 }
 </script>
