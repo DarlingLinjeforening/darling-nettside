@@ -16,7 +16,7 @@
       class="hidden lg:block lg:w-[70%] lg:justify-center lg:relative lg:p-10"
     >
       <img
-        class="lg:absolute lg:aspect-[4/3] lg:w-[50%] lg:border-4 lg:border-darling-purple-light bottom-0 left-0"
+        class="lg:absolute lg:aspect-[4/3] lg:w-[80%] lg:border-4 lg:border-darling-purple-light bottom-0 left-0"
         :src="urlFor(heroImages.image1)"
         alt="image1"
       />
@@ -26,7 +26,7 @@
         alt="image2"
       />
       <img
-        class="lg:absolute lg:z-5 lg:aspect-[4/3] lg:w-[50%] lg:border-4 lg:border-darling-purple-light top-[0px] left-[50px]"
+        class="lg:absolute lg:z-5 lg:aspect-[4/3] lg:w-[90%] lg:border-4 lg:border-darling-purple-light top-[0px] left-[50px]"
         :src="urlFor(heroImages.image3)"
         alt="image3"
       />
