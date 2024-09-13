@@ -45,7 +45,7 @@
           @click="scrollToTop"
         >
           <img
-            class="w-[18px] translate-y-3"
+            class="w-[18px] -translate-y-3"
             src="/images/arrow.svg"
             alt="arrow"
           />
@@ -59,32 +59,32 @@
 </template>
 
 <script>
-import { i18n } from "../i18n";
+    import { i18n } from '../i18n';
 
-export default {
-  data() {
-    return {
-      i18n,
-      contact: [],
-      socials: [],
+    export default {
+        data() {
+            return {
+                i18n,
+                contact: [],
+                socials: [],
+            };
+        },
+        mounted() {
+            this.$sanityClient
+                .fetch('*[_type == "contact"]{email, address, socials}')
+                .then((data) => {
+                    this.contact = data[0];
+                    this.socials = data[0].socials;
+                });
+        },
+        methods: {
+            scrollToTop() {
+                // Scroll to the top of the page smoothly
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth',
+                });
+            },
+        },
     };
-  },
-  mounted() {
-    this.$sanityClient
-      .fetch('*[_type == "contact"]{email, address, socials}')
-      .then((data) => {
-        this.contact = data[0];
-        this.socials = data[0].socials;
-      });
-  },
-  methods: {
-    scrollToTop() {
-      // Scroll to the top of the page smoothly
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    },
-  },
-};
 </script>
