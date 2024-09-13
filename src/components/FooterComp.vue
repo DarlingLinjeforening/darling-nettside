@@ -45,7 +45,7 @@
           @click="scrollToTop"
         >
           <img
-            class="w-[18px] -translate-y-3"
+            class="w-[18px] translate-y-3"
             src="/images/arrow.svg"
             alt="arrow"
           />
