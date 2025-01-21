@@ -35,6 +35,13 @@
           <a :href="'mailto:' + contact.email">{{ contact.email }}</a>
         </p>
       </div>
+      <div>
+        <h3 class="text-white text-center mb-5 font-bold text-lg uppercase">
+          Documents
+        </h3>
+        <p class="text-white text-center hover:underline">
+          <a :href="'https://drive.google.com/drive/folders/1nk9fbBrrVeuH26jJcM1EB2nviA-0jJRf?usp=sharing'">public documents</a> </p>
+      </div>
       <div class="hidden md:block"></div>
     </div>
     <div class="bg-darling-purple-light">
@@ -45,7 +52,7 @@
           @click="scrollToTop"
         >
           <img
-            class="w-[18px] -translate-y-3"
+            class="w-[18px] -translate-y3"
             src="/images/arrow.svg"
             alt="arrow"
           />
