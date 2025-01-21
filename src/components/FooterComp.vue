@@ -65,7 +65,7 @@
                     @click="scrollToTop"
                 >
                     <img
-                        class="w-[18px] -translate-y3"
+                        class="w-[18px] -translate-y6"
                         src="/images/arrow.svg"
                         alt="Go to the top of the page"
                     />
