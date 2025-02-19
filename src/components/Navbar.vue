@@ -67,7 +67,7 @@
                         </li>
                         <!-- test designdag navigation -->
                         <li>
-                            <a class="navlink" href="../../public/designdagen/index.html">Designdagen</a>
+                            <a class="navlink" href="/src/designdagen2/index.html">Designdagen</a>
                         </li>
                     </ul>
                 </div>
