@@ -65,6 +65,10 @@
                                 i18n.navigation.contact
                             }}</RouterLink>
                         </li>
+                        <!-- test designdag navigation -->
+                        <li>
+                            <a class="navlink" href="../../public/designdagen/index.html">Designdagen</a>
+                        </li>
                     </ul>
                 </div>
             </div>
