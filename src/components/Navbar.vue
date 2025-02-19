@@ -67,7 +67,7 @@
                         </li>
                         <!-- test designdag navigation -->
                         <li>
-                            <a class="navlink" href="/https://www.google.com/">Designdagen</a>
+                            <a class="navlink" href="https://www.google.com/">Designdagen</a>
                         </li>
                     </ul>
                 </div>
@@ -137,7 +137,7 @@
 
                         <!-- test designdag navigation -->
                         <li>
-                            <a class="navlink" href="/https://www.google.com/">Designdagen</a>
+                            <a class="navlink" href="https://www.google.com/">Designdagen</a>
                         </li>
                     </ul>
                     <!-- Social icons -->
