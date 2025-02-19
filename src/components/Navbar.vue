@@ -67,7 +67,7 @@
                         </li>
                         <!-- test designdag navigation -->
                         <li>
-                            <a class="navlink" href="/src/designdagen2/index.html">Designdagen</a>
+                            <a class="navlink" href="/https://www.google.com/">Designdagen</a>
                         </li>
                     </ul>
                 </div>
@@ -134,10 +134,10 @@
                                 >{{ i18n.navigation.contact }}</RouterLink
                             >
                         </li>
-                        
+
                         <!-- test designdag navigation -->
                         <li>
-                            <a class="navlink" href="/src/designdagen2/index.html">Designdagen</a>
+                            <a class="navlink" href="/https://www.google.com/">Designdagen</a>
                         </li>
                     </ul>
                     <!-- Social icons -->
