@@ -71,7 +71,7 @@
                             href="https://karrieredag.darlinglinjeforening.org/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="navlink text-yellow-400 font-bold hover:text-yellow-300 transition duration-200"
+                            class="navlink"
                           >
                             Karrieredag
                           </a>
@@ -144,8 +144,16 @@
                         </li>
                         <!-- test karrieredag navigation -->
                         <li>
-                            <a class="navlink bg-gradient-to-r from-white to-[#85FFAC] bg-clip-text text-transparent font-bold" href="https://karrieredag.darlinglinjeforening.org/">Karrieredag</a>
+                          <a
+                            href="https://karrieredag.darlinglinjeforening.org/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="navlink"
+                          >
+                            Karrieredag
+                          </a>
                         </li>
+                        <!-- test karrieredag navigation slutter her -->
                     </ul>
                     <!-- Social icons -->
                     <div
