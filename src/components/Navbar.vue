@@ -67,7 +67,8 @@
                         </li>
                         <!-- test karrieredag navigation -->
                         <li>
-                            <a class="navlink bg-gradient-to-r from-white to-[#85FFAC] bg-clip-text text-transparent font-bold" href="https://karrieredag.darlinglinjeforening.org/">Karrieredag</a>
+                            <a href="https://karrieredag.darlinglinjeforening.org/" rel="noopener noreferrer"
+  class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-[#85FFAC] hover:from-[#85FFAC] hover:to-white transition duration-300">Karrieredag</a>
                         </li>
                     </ul>
                 </div>
