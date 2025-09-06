@@ -67,7 +67,7 @@
                         </li>
                         <!-- test karrieredag navigation -->
                         <li>
-                            <a class="navlink" href="https://karrieredag.darlinglinjeforening.org/">Karrieredag</a>
+                            <a class="navlink bg-gradient-to-r from-white to-[#85FFAC] bg-clip-text text-transparent font-bold" href="https://karrieredag.darlinglinjeforening.org/">Karrieredag</a>
                         </li>
                     </ul>
                 </div>
@@ -136,7 +136,7 @@
                         </li>
                         <!-- test karrieredag navigation -->
                         <li>
-                            <a class="navlink" href="https://karrieredag.darlinglinjeforening.org/">Karrieredag</a>
+                            <a class="navlink bg-gradient-to-r from-white to-[#85FFAC] bg-clip-text text-transparent font-bold" href="https://karrieredag.darlinglinjeforening.org/">Karrieredag</a>
                         </li>
                     </ul>
                     <!-- Social icons -->
