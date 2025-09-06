@@ -67,9 +67,16 @@
                         </li>
                         <!-- test karrieredag navigation -->
                         <li>
-                            <a href="https://karrieredag.darlinglinjeforening.org/" rel="noopener noreferrer"
-  class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-[#85FFAC] hover:from-[#85FFAC] hover:to-white transition duration-300">Karrieredag</a>
+                          <a
+                            href="https://karrieredag.darlinglinjeforening.org/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="navlink text-yellow-400 font-bold hover:text-yellow-300 transition duration-200"
+                          >
+                            Karrieredag
+                          </a>
                         </li>
+                        <!-- test karrieredag navigation slutter her -->
                     </ul>
                 </div>
             </div>
