@@ -65,6 +65,10 @@
                                 i18n.navigation.contact
                             }}</RouterLink>
                         </li>
+                        <!-- test karrieredag navigation -->
+                        <li>
+                            <a class="navlink" href="https://karrieredag.darlinglinjeforening.org/">Karrieredag</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -129,6 +133,10 @@
                                 to="/contact"
                                 >{{ i18n.navigation.contact }}</RouterLink
                             >
+                        </li>
+                        <!-- test karrieredag navigation -->
+                        <li>
+                            <a class="navlink" href="https://karrieredag.darlinglinjeforening.org/">Karrieredag</a>
                         </li>
                     </ul>
                     <!-- Social icons -->
