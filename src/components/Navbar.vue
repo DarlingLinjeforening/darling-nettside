@@ -143,7 +143,7 @@
                             >
                         </li>
                         <!-- test karrieredag navigation -->
-                        <li>
+                   <!--     <li>
                           <a
                             href="https://karrieredag.darlinglinjeforening.org/"
                             target="_blank"
@@ -152,7 +152,7 @@
                           >
                             Karrieredag
                           </a>
-                        </li>
+                        </li> -->
                         <!-- test karrieredag navigation slutter her -->
                     </ul>
                     <!-- Social icons -->
