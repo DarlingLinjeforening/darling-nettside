@@ -66,7 +66,7 @@
                             }}</RouterLink>
                         </li>
                         <!-- test karrieredag navigation -->
-                        <li>
+                        <!--  <li>
                           <a
                             href="https://karrieredag.darlinglinjeforening.org/"
                             target="_blank"
@@ -75,8 +75,8 @@
                           >
                             Karrieredag
                           </a>
-                        </li>
-                        <!-- test karrieredag navigation slutter her -->
+                        </li> -->
+                        <!-- test karrieredag navigation slutter her --> 
                     </ul>
                 </div>
             </div>
