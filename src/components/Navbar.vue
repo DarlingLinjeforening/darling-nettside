@@ -142,7 +142,7 @@
                                 >{{ i18n.navigation.contact }}</RouterLink
                             >
                         </li>
-                        <!-- test karrieredag navigation -->
+<!--                        <!-- test karrieredag navigation -->
                         <li>
                           <a
                             href="https://karrieredag.darlinglinjeforening.org/"
@@ -153,7 +153,7 @@
                             Karrieredag
                           </a>
                         </li>
-                        <!-- test karrieredag navigation slutter her -->
+                        <!-- test karrieredag navigation slutter her --> -->
                     </ul>
                     <!-- Social icons -->
                     <div
