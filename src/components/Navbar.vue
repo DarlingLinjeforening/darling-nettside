@@ -65,18 +65,7 @@
                                 i18n.navigation.contact
                             }}</RouterLink>
                         </li>
-                        <!-- test karrieredag navigation -->
-                        <!--  <li>
-                          <a
-                            href="https://karrieredag.darlinglinjeforening.org/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="navlink"
-                          >
-                            Karrieredag
-                          </a>
-                        </li> -->
-                        <!-- test karrieredag navigation slutter her --> 
+                        
                     </ul>
                 </div>
             </div>
@@ -142,18 +131,7 @@
                                 >{{ i18n.navigation.contact }}</RouterLink
                             >
                         </li>
-                        <!-- test karrieredag navigation -->
-                   <!--     <li>
-                          <a
-                            href="https://karrieredag.darlinglinjeforening.org/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="navlink"
-                          >
-                            Karrieredag
-                          </a>
-                        </li> -->
-                        <!-- test karrieredag navigation slutter her -->
+
                     </ul>
                     <!-- Social icons -->
                     <div
