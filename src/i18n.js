@@ -26,7 +26,7 @@ export const i18n = {
   readMore: "Read More",
   socialMedia: {
     callout: "Follow us on Instagram, Facebook, and LinkedIn!",
-    copyright: "© 2025 darling Linjeforening",
+    copyright: "© 2026 darling Linjeforening",
   },
   navigation: {
     home: "Home",
