@@ -66,10 +66,10 @@
                             }}</RouterLink>
                         </li>
 
-                         <!-- test designdag navigation -->
-                        <li>
+                         <!-- designdag navigation: kommenter ut for å bruke -->
+                        <!-- <li>
                             <a class="navlink" href="https://designdagen.darlinglinjeforening.org/">Designdagen</a>
-                        </li>
+                        </li> -->
                         
                     </ul>
                 </div>
@@ -138,9 +138,9 @@
                         </li>
 
                          <!-- test designdag navigation -->
-                        <li>
+                        <!-- <li>
                             <a class="navlink" href="https://designdagen.darlinglinjeforening.org/">Designdagen</a>
-                        </li>
+                        </li> -->
 
                     </ul>
                     <!-- Social icons -->
